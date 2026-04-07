@@ -54,6 +54,185 @@
       "name": "Hole_diam"
     },
     {
+      "atomType": "Export",
+      "x": 0.6345004269854825,
+      "y": 0.25155279503105593,
+      "uniqueID": "id-1759",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "File Type",
+          "ioValue": "STL",
+          "currentEquation": "STL"
+        },
+        {
+          "name": "Resolution (dpi)",
+          "ioValue": 96
+        },
+        {
+          "name": "Part Name",
+          "ioValue": "corner-clamp",
+          "currentEquation": "corner-clamp"
+        }
+      ],
+      "type": null,
+      "resolution": 96,
+      "importIndex": 0,
+      "partName": "corner-clamp"
+    },
+    {
+      "atomType": "GitHubMolecule",
+      "x": 0.4824935952177626,
+      "y": 0.5341614906832298,
+      "uniqueID": "id-1741",
+      "name": "threaded-rod",
+      "ioValues": [
+        {
+          "name": "diameter",
+          "ioValue": 0.25
+        },
+        {
+          "name": "Length",
+          "ioValue": 1
+        },
+        {
+          "name": "pitch",
+          "ioValue": 0.1,
+          "currentEquation": "0.1"
+        },
+        {
+          "name": "toothside",
+          "ioValue": 0.05
+        }
+      ],
+      "topLevel": false,
+      "allAtoms": [
+        {
+          "atomType": "Output",
+          "x": 0.98,
+          "y": 0.5,
+          "uniqueID": "id-1735",
+          "ioValues": [
+            {
+              "name": "number or geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            }
+          ]
+        },
+        {
+          "atomType": "Code",
+          "x": 0.5380017079419299,
+          "y": 0.4751552795031056,
+          "uniqueID": "id-1736",
+          "ioValues": [
+            {
+              "name": "diameter",
+              "ioValue": 0.25
+            },
+            {
+              "name": "length",
+              "ioValue": 1
+            },
+            {
+              "name": "pitch",
+              "ioValue": 0.1
+            },
+            {
+              "name": "toothSide",
+              "ioValue": 0.05
+            }
+          ],
+          "codeVersion": 1,
+          "code": "const Inputs = [\n  { inputName: \"diameter\", type: \"number\", defaultValue: 10 },\n  { inputName: \"length\", type: \"number\", defaultValue: 30 },\n  { inputName: \"pitch\", type: \"number\", defaultValue: 2 },\n  { inputName: \"toothSide\", type: \"number\", defaultValue: 0.6 }\n];\n\nconst innerRadius = diameter / 2;\n\n// Draw the thread profile: a triangle swept along a helix\nconst drawProfile = (plane, origin) => {\n  const originPlane = new replicad.Plane(origin, [0, 0, -1], plane.zDir);\n  return replicad.draw()\n    .hLine(-toothSide)\n    .polarLine(toothSide, 60)\n    .close()\n    .sketchOnPlane(originPlane);\n};\n\nconst threadHelix = replicad.sketchHelix(\n  pitch,\n  length,\n  innerRadius,\n  [0, 0, 0],\n  [0, 0, 1],\n  false\n);\n\nconst thread = threadHelix.sweepSketch(drawProfile, { frenet: true });\n\n// Main cylinder shaft - rotate 2 degrees to avoid seam collision with thread start\nconst shaft = replicad.makeCylinder(innerRadius, length).rotate(2);\n\n// Fuse with sameFace optimisation to prevent kernel errors at the junction\nconst screw = shaft.fuse(thread, { optimisation: \"sameFace\" });\n\nreturn {\n  geometry: [screw],\n  dimension: \"3D\",\n  tags: [\"screw\"],\n  color: \"#8a8a8a\",\n  plane: null,\n  bom: []\n};"
+        },
+        {
+          "atomType": "Input",
+          "x": 0.025384615384615384,
+          "y": 0.15384615384615385,
+          "uniqueID": "id-1737",
+          "name": "diameter"
+        },
+        {
+          "atomType": "Input",
+          "x": 0.025384615384615384,
+          "y": 0.24615384615384617,
+          "uniqueID": "id-1738",
+          "name": "Length"
+        },
+        {
+          "atomType": "Input",
+          "x": 0.025384615384615384,
+          "y": 0.3384615384615385,
+          "uniqueID": "id-1739",
+          "name": "pitch"
+        },
+        {
+          "atomType": "Input",
+          "x": 0.025384615384615384,
+          "y": 0.4307692307692308,
+          "uniqueID": "id-1740",
+          "name": "toothside"
+        }
+      ],
+      "allConnectors": [
+        {
+          "ap2Name": "number or geometry",
+          "ap1ID": "id-1736",
+          "ap2ID": "id-1735"
+        },
+        {
+          "ap2Name": "diameter",
+          "ap1ID": "id-1737",
+          "ap2ID": "id-1736"
+        },
+        {
+          "ap2Name": "length",
+          "ap1ID": "id-1738",
+          "ap2ID": "id-1736"
+        },
+        {
+          "ap2Name": "pitch",
+          "ap1ID": "id-1739",
+          "ap2ID": "id-1736"
+        },
+        {
+          "ap2Name": "toothSide",
+          "ap1ID": "id-1740",
+          "ap2ID": "id-1736"
+        }
+      ],
+      "parentRepo": {
+        "privateRepo": false,
+        "repoName": "threaded-rod",
+        "dateCreated": "2026-04-07T16:22:24Z",
+        "readMe": "https://raw.githubusercontent.com/alzatin/threaded-rod/master/README.md?sanitize=true",
+        "yyyy": 2026,
+        "topMoleculeID": "id-396",
+        "githubMoleculesUsed": [],
+        "html_url": "https://github.com/alzatin/threaded-rod",
+        "topics": [
+          "hardware",
+          "thread",
+          "threading"
+        ],
+        "parentRepo": null,
+        "forks": 0,
+        "dateModified": "739713",
+        "ranking": 0,
+        "searchField": "threaded-rod alzatin a molecule that results in a threaded cylinder hardware thread threading",
+        "owner": "alzatin",
+        "description": "A molecule that results in a threaded cylinder",
+        "contentURL": "https://raw.githubusercontent.com/alzatin/threaded-rod/master/project.abundance?sanitize=true",
+        "svgURL": "https://raw.githubusercontent.com/alzatin/threaded-rod/master/project.svg?sanitize=true",
+        "isLocal": false
+      },
+      "unitsKey": "Unitless",
+      "fileTypeVersion": 1
+    },
+    {
       "atomType": "Molecule",
       "x": 0.23911187019641333,
       "y": 0.2888198757763975,
@@ -1395,185 +1574,36 @@
       "fileTypeVersion": 1
     },
     {
-      "atomType": "GitHubMolecule",
-      "x": 0.4953031596925705,
-      "y": 0.6055900621118013,
-      "uniqueID": "id-1741",
-      "name": "threaded-rod",
+      "atomType": "Rectangle",
+      "x": 0.46883005977796754,
+      "y": 0.7329192546583851,
+      "uniqueID": "id-1955",
       "ioValues": [
         {
-          "name": "diameter",
-          "ioValue": 0.25,
-          "currentEquation": ".25"
+          "name": "x length",
+          "ioValue": 10
         },
         {
-          "name": "Length",
-          "ioValue": 1,
-          "currentEquation": "1"
-        },
-        {
-          "name": "pitch",
-          "ioValue": 0.25,
-          "currentEquation": ".25"
-        },
-        {
-          "name": "toothside",
-          "ioValue": 0.05
+          "name": "y length",
+          "ioValue": 10
         }
-      ],
-      "topLevel": false,
-      "allAtoms": [
-        {
-          "atomType": "Output",
-          "x": 0.98,
-          "y": 0.5,
-          "uniqueID": "id-1735",
-          "ioValues": [
-            {
-              "name": "number or geometry",
-              "ioValue": "__GEOMETRY_INPUT__"
-            }
-          ]
-        },
-        {
-          "atomType": "Code",
-          "x": 0.5380017079419299,
-          "y": 0.4751552795031056,
-          "uniqueID": "id-1736",
-          "ioValues": [
-            {
-              "name": "diameter",
-              "ioValue": 0.25
-            },
-            {
-              "name": "length",
-              "ioValue": 1
-            },
-            {
-              "name": "pitch",
-              "ioValue": 0.25
-            },
-            {
-              "name": "toothSide",
-              "ioValue": 0.05
-            }
-          ],
-          "codeVersion": 1,
-          "code": "const Inputs = [\n  { inputName: \"diameter\", type: \"number\", defaultValue: 10 },\n  { inputName: \"length\", type: \"number\", defaultValue: 30 },\n  { inputName: \"pitch\", type: \"number\", defaultValue: 2 },\n  { inputName: \"toothSide\", type: \"number\", defaultValue: 0.6 }\n];\n\nconst innerRadius = diameter / 2;\n\n// Draw the thread profile: a triangle swept along a helix\nconst drawProfile = (plane, origin) => {\n  const originPlane = new replicad.Plane(origin, [0, 0, -1], plane.zDir);\n  return replicad.draw()\n    .hLine(-toothSide)\n    .polarLine(toothSide, 60)\n    .close()\n    .sketchOnPlane(originPlane);\n};\n\nconst threadHelix = replicad.sketchHelix(\n  pitch,\n  length,\n  innerRadius,\n  [0, 0, 0],\n  [0, 0, 1],\n  false\n);\n\nconst thread = threadHelix.sweepSketch(drawProfile, { frenet: true });\n\n// Main cylinder shaft - rotate 2 degrees to avoid seam collision with thread start\nconst shaft = replicad.makeCylinder(innerRadius, length).rotate(2);\n\n// Fuse with sameFace optimisation to prevent kernel errors at the junction\nconst screw = shaft.fuse(thread, { optimisation: \"sameFace\" });\n\nreturn {\n  geometry: [screw],\n  dimension: \"3D\",\n  tags: [\"screw\"],\n  color: \"#8a8a8a\",\n  plane: null,\n  bom: []\n};"
-        },
-        {
-          "atomType": "Input",
-          "x": 0.025384615384615384,
-          "y": 0.15384615384615385,
-          "uniqueID": "id-1737",
-          "name": "diameter"
-        },
-        {
-          "atomType": "Input",
-          "x": 0.025384615384615384,
-          "y": 0.24615384615384617,
-          "uniqueID": "id-1738",
-          "name": "Length"
-        },
-        {
-          "atomType": "Input",
-          "x": 0.025384615384615384,
-          "y": 0.3384615384615385,
-          "uniqueID": "id-1739",
-          "name": "pitch"
-        },
-        {
-          "atomType": "Input",
-          "x": 0.025384615384615384,
-          "y": 0.4307692307692308,
-          "uniqueID": "id-1740",
-          "name": "toothside"
-        }
-      ],
-      "allConnectors": [
-        {
-          "ap2Name": "number or geometry",
-          "ap1ID": "id-1736",
-          "ap2ID": "id-1735"
-        },
-        {
-          "ap2Name": "diameter",
-          "ap1ID": "id-1737",
-          "ap2ID": "id-1736"
-        },
-        {
-          "ap2Name": "length",
-          "ap1ID": "id-1738",
-          "ap2ID": "id-1736"
-        },
-        {
-          "ap2Name": "pitch",
-          "ap1ID": "id-1739",
-          "ap2ID": "id-1736"
-        },
-        {
-          "ap2Name": "toothSide",
-          "ap1ID": "id-1740",
-          "ap2ID": "id-1736"
-        }
-      ],
-      "parentRepo": {
-        "privateRepo": false,
-        "repoName": "threaded-rod",
-        "dateCreated": "2026-04-07T16:22:24Z",
-        "readMe": "https://raw.githubusercontent.com/alzatin/threaded-rod/master/README.md?sanitize=true",
-        "yyyy": 2026,
-        "topMoleculeID": "id-396",
-        "githubMoleculesUsed": [],
-        "html_url": "https://github.com/alzatin/threaded-rod",
-        "topics": [
-          "hardware",
-          "thread",
-          "threading"
-        ],
-        "parentRepo": null,
-        "forks": 0,
-        "dateModified": "739713",
-        "ranking": 0,
-        "searchField": "threaded-rod alzatin a molecule that results in a threaded cylinder hardware thread threading",
-        "owner": "alzatin",
-        "description": "A molecule that results in a threaded cylinder",
-        "contentURL": "https://raw.githubusercontent.com/alzatin/threaded-rod/master/project.abundance?sanitize=true",
-        "svgURL": "https://raw.githubusercontent.com/alzatin/threaded-rod/master/project.svg?sanitize=true",
-        "isLocal": false
-      },
-      "unitsKey": "Unitless",
-      "fileTypeVersion": 1
+      ]
     },
     {
-      "atomType": "Export",
-      "x": 0.6148590947907772,
-      "y": 0.6925465838509317,
-      "uniqueID": "id-1759",
+      "atomType": "Extrude",
+      "x": 0.5636208368915457,
+      "y": 0.7267080745341615,
+      "uniqueID": "id-1959",
       "ioValues": [
         {
           "name": "geometry",
           "ioValue": "__GEOMETRY_INPUT__"
         },
         {
-          "name": "File Type",
-          "ioValue": "STL",
-          "currentEquation": "STL"
-        },
-        {
-          "name": "Resolution (dpi)",
-          "ioValue": 96
-        },
-        {
-          "name": "Part Name",
-          "ioValue": "corner-clamp",
-          "currentEquation": "corner-clamp"
+          "name": "height",
+          "ioValue": 10
         }
-      ],
-      "type": null,
-      "resolution": 96,
-      "importIndex": 0,
-      "partName": "corner-clamp"
+      ]
     }
   ],
   "allConnectors": [
@@ -1601,6 +1631,11 @@
       "ap2Name": "geometry",
       "ap1ID": "id-1741",
       "ap2ID": "id-1759"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-1955",
+      "ap2ID": "id-1959"
     }
   ],
   "unitsKey": "Inches",
