@@ -51,8 +51,8 @@
     },
     {
       "atomType": "Molecule",
-      "x": 0.24965229485396384,
-      "y": 0.4192546583850931,
+      "x": 0.2524339360222531,
+      "y": 0.4472049689440994,
       "uniqueID": "id-233",
       "name": "Corner_piece",
       "ioValues": [
@@ -516,7 +516,7 @@
         },
         {
           "atomType": "Difference",
-          "x": 0.7920723226703754,
+          "x": 0.7906815020862308,
           "y": 0.3944099378881988,
           "uniqueID": "id-355",
           "ioValues": [
@@ -557,8 +557,8 @@
         },
         {
           "atomType": "Move",
-          "x": 0.5514603616133519,
-          "y": 0.7080745341614907,
+          "x": 0.5486787204450626,
+          "y": 0.717391304347826,
           "uniqueID": "id-365",
           "ioValues": [
             {
@@ -567,8 +567,8 @@
             },
             {
               "name": "xDist",
-              "ioValue": 0.75,
-              "currentEquation": "Hole_diam *3"
+              "ioValue": 1,
+              "currentEquation": "Hole_diam *4"
             },
             {
               "name": "yDist",
@@ -645,6 +645,11 @@
           "ap2Name": "geometry",
           "ap1ID": "id-332",
           "ap2ID": "id-365"
+        },
+        {
+          "ap2Name": "number or geometry",
+          "ap1ID": "id-355",
+          "ap2ID": "id-235"
         },
         {
           "ap2Name": "Shape 2",
