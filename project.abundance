@@ -7,18 +7,15 @@
   "ioValues": [
     {
       "name": "Angle",
-      "ioValue": 90,
-      "currentEquation": "90"
+      "ioValue": 90
     },
     {
       "name": "Side_Length",
-      "ioValue": 6,
-      "currentEquation": "6"
+      "ioValue": 6
     },
     {
       "name": "Hole_diam",
-      "ioValue": 0.25,
-      "currentEquation": ".25"
+      "ioValue": 0.25
     }
   ],
   "topLevel": true,
@@ -38,16 +35,23 @@
     {
       "atomType": "Input",
       "x": 0.025384615384615384,
-      "y": 0.25155279503105593,
+      "y": 0.15384615384615385,
       "uniqueID": "id-227",
       "name": "Angle"
     },
     {
       "atomType": "Input",
       "x": 0.025384615384615384,
-      "y": 0.34386048733874824,
+      "y": 0.24615384615384617,
       "uniqueID": "id-230",
       "name": "Side_Length"
+    },
+    {
+      "atomType": "Input",
+      "x": 0.025384615384615384,
+      "y": 0.3384615384615385,
+      "uniqueID": "id-247",
+      "name": "Hole_diam"
     },
     {
       "atomType": "Molecule",
@@ -106,6 +110,141 @@
           "uniqueID": "id-250",
           "name": "Hole_diam",
           "type": "number"
+        },
+        {
+          "atomType": "Circle",
+          "x": 0.2148817802503477,
+          "y": 0.7236024844720497,
+          "uniqueID": "id-316",
+          "ioValues": [
+            {
+              "name": "diameter",
+              "ioValue": 0.25,
+              "currentEquation": "Hole_diam"
+            }
+          ]
+        },
+        {
+          "atomType": "Extrude",
+          "x": 0.34492350486787204,
+          "y": 0.7391304347826086,
+          "uniqueID": "id-319",
+          "ioValues": [
+            {
+              "name": "geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "height",
+              "ioValue": 1
+            }
+          ]
+        },
+        {
+          "atomType": "Difference",
+          "x": 0.7906815020862308,
+          "y": 0.3944099378881988,
+          "uniqueID": "id-355",
+          "ioValues": [
+            {
+              "name": "geometry1",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "geometry2",
+              "ioValue": "__GEOMETRY_INPUT__"
+            }
+          ]
+        },
+        {
+          "atomType": "Rotate",
+          "x": 0.6564673157162726,
+          "y": 0.8167701863354037,
+          "uniqueID": "id-359",
+          "ioValues": [
+            {
+              "name": "geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "x-axis degrees",
+              "ioValue": 0
+            },
+            {
+              "name": "y-axis degrees",
+              "ioValue": 0
+            },
+            {
+              "name": "z-axis degrees",
+              "ioValue": 90
+            }
+          ]
+        },
+        {
+          "atomType": "Move",
+          "x": 0.5486787204450626,
+          "y": 0.717391304347826,
+          "uniqueID": "id-365",
+          "ioValues": [
+            {
+              "name": "geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "xDist",
+              "ioValue": 1,
+              "currentEquation": "Hole_diam *4"
+            },
+            {
+              "name": "yDist",
+              "ioValue": -0.25,
+              "currentEquation": "-Hole_diam"
+            },
+            {
+              "name": "zDist",
+              "ioValue": 0
+            }
+          ]
+        },
+        {
+          "atomType": "Rotate",
+          "x": 0.6328233657858137,
+          "y": 0.5683229813664596,
+          "uniqueID": "id-371",
+          "ioValues": [
+            {
+              "name": "geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "x-axis degrees",
+              "ioValue": 0
+            },
+            {
+              "name": "y-axis degrees",
+              "ioValue": 0
+            },
+            {
+              "name": "z-axis degrees",
+              "ioValue": 180
+            }
+          ]
+        },
+        {
+          "atomType": "Assembly",
+          "x": 0.7593880389429764,
+          "y": 0.7546583850931677,
+          "uniqueID": "id-377",
+          "ioValues": [
+            {
+              "name": "Shape 1",
+              "ioValue": null
+            },
+            {
+              "name": "Shape 2",
+              "ioValue": null
+            }
+          ]
         },
         {
           "atomType": "Molecule",
@@ -310,36 +449,6 @@
           "fileTypeVersion": 1
         },
         {
-          "atomType": "Circle",
-          "x": 0.2148817802503477,
-          "y": 0.7236024844720497,
-          "uniqueID": "id-316",
-          "ioValues": [
-            {
-              "name": "diameter",
-              "ioValue": 0.25,
-              "currentEquation": "Hole_diam"
-            }
-          ]
-        },
-        {
-          "atomType": "Extrude",
-          "x": 0.34492350486787204,
-          "y": 0.7391304347826086,
-          "uniqueID": "id-319",
-          "ioValues": [
-            {
-              "name": "geometry",
-              "ioValue": "__GEOMETRY_INPUT__"
-            },
-            {
-              "name": "height",
-              "ioValue": 1,
-              "currentEquation": "1"
-            }
-          ]
-        },
-        {
           "atomType": "GitHubMolecule",
           "x": 0.4513212795549374,
           "y": 0.7204968944099379,
@@ -353,8 +462,7 @@
             },
             {
               "name": "Spacing",
-              "ioValue": 0.65,
-              "currentEquation": ".65"
+              "ioValue": 0.65
             }
           ],
           "topLevel": false,
@@ -513,124 +621,9 @@
           },
           "unitsKey": "Unitless",
           "fileTypeVersion": 1
-        },
-        {
-          "atomType": "Difference",
-          "x": 0.7906815020862308,
-          "y": 0.3944099378881988,
-          "uniqueID": "id-355",
-          "ioValues": [
-            {
-              "name": "geometry1",
-              "ioValue": "__GEOMETRY_INPUT__"
-            },
-            {
-              "name": "geometry2",
-              "ioValue": "__GEOMETRY_INPUT__"
-            }
-          ]
-        },
-        {
-          "atomType": "Rotate",
-          "x": 0.6564673157162726,
-          "y": 0.8167701863354037,
-          "uniqueID": "id-359",
-          "ioValues": [
-            {
-              "name": "geometry",
-              "ioValue": "__GEOMETRY_INPUT__"
-            },
-            {
-              "name": "x-axis degrees",
-              "ioValue": 0
-            },
-            {
-              "name": "y-axis degrees",
-              "ioValue": 0
-            },
-            {
-              "name": "z-axis degrees",
-              "ioValue": 90,
-              "currentEquation": "90"
-            }
-          ]
-        },
-        {
-          "atomType": "Move",
-          "x": 0.5486787204450626,
-          "y": 0.717391304347826,
-          "uniqueID": "id-365",
-          "ioValues": [
-            {
-              "name": "geometry",
-              "ioValue": "__GEOMETRY_INPUT__"
-            },
-            {
-              "name": "xDist",
-              "ioValue": 1,
-              "currentEquation": "Hole_diam *4"
-            },
-            {
-              "name": "yDist",
-              "ioValue": -0.25,
-              "currentEquation": "-Hole_diam"
-            },
-            {
-              "name": "zDist",
-              "ioValue": 0
-            }
-          ]
-        },
-        {
-          "atomType": "Rotate",
-          "x": 0.6328233657858137,
-          "y": 0.5683229813664596,
-          "uniqueID": "id-371",
-          "ioValues": [
-            {
-              "name": "geometry",
-              "ioValue": "__GEOMETRY_INPUT__"
-            },
-            {
-              "name": "x-axis degrees",
-              "ioValue": 0,
-              "currentEquation": "0"
-            },
-            {
-              "name": "y-axis degrees",
-              "ioValue": 0,
-              "currentEquation": "0"
-            },
-            {
-              "name": "z-axis degrees",
-              "ioValue": 180,
-              "currentEquation": "180"
-            }
-          ]
-        },
-        {
-          "atomType": "Assembly",
-          "x": 0.7593880389429764,
-          "y": 0.7546583850931677,
-          "uniqueID": "id-377",
-          "ioValues": [
-            {
-              "name": "Shape 1",
-              "ioValue": null
-            },
-            {
-              "name": "Shape 2",
-              "ioValue": null
-            }
-          ]
         }
       ],
       "allConnectors": [
-        {
-          "ap2Name": "geometry1",
-          "ap1ID": "id-282",
-          "ap2ID": "id-355"
-        },
         {
           "ap2Name": "geometry",
           "ap1ID": "id-316",
@@ -640,11 +633,6 @@
           "ap2Name": "Shape",
           "ap1ID": "id-319",
           "ap2ID": "id-332"
-        },
-        {
-          "ap2Name": "geometry",
-          "ap1ID": "id-332",
-          "ap2ID": "id-365"
         },
         {
           "ap2Name": "number or geometry",
@@ -675,6 +663,16 @@
           "ap2Name": "geometry2",
           "ap1ID": "id-377",
           "ap2ID": "id-355"
+        },
+        {
+          "ap2Name": "geometry1",
+          "ap1ID": "id-282",
+          "ap2ID": "id-355"
+        },
+        {
+          "ap2Name": "geometry",
+          "ap1ID": "id-332",
+          "ap2ID": "id-365"
         }
       ],
       "fileTypeVersion": 1
@@ -715,10 +713,16 @@
         },
         {
           "atomType": "Molecule",
-          "x": 0.22600834492350488,
-          "y": 0.4472049689440994,
+          "x": 0.22544833475661827,
+          "y": 0.48447204968944096,
           "uniqueID": "id-382",
-          "name": "Molecule",
+          "name": "Corner_thread_piece",
+          "ioValues": [
+            {
+              "name": "Hole_diam",
+              "ioValue": 0.25
+            }
+          ],
           "topLevel": false,
           "allAtoms": [
             {
@@ -734,51 +738,400 @@
               ]
             },
             {
+              "atomType": "GitHubMolecule",
+              "x": 0.3748932536293766,
+              "y": 0.3198757763975155,
+              "uniqueID": "id-534",
+              "name": "Solid-rod-bent-corner",
+              "ioValues": [
+                {
+                  "name": "Tube_radius",
+                  "ioValue": 0.125,
+                  "currentEquation": "Hole_diam/2"
+                },
+                {
+                  "name": "Bend_radius",
+                  "ioValue": 0.5,
+                  "currentEquation": ".5"
+                }
+              ],
+              "topLevel": false,
+              "allAtoms": [
+                {
+                  "atomType": "Output",
+                  "x": 0.98,
+                  "y": 0.5,
+                  "uniqueID": "id-530",
+                  "ioValues": [
+                    {
+                      "name": "number or geometry",
+                      "ioValue": "__GEOMETRY_INPUT__"
+                    }
+                  ]
+                },
+                {
+                  "atomType": "Code",
+                  "x": 0.42869342442356956,
+                  "y": 0.5652173913043479,
+                  "uniqueID": "id-531",
+                  "ioValues": [
+                    {
+                      "name": "tubeRadius",
+                      "ioValue": 0.125
+                    },
+                    {
+                      "name": "bendRadius",
+                      "ioValue": 0.5
+                    }
+                  ],
+                  "codeVersion": 1,
+                  "code": "const Inputs = [\n  { inputName: \"tubeRadius\", type: \"number\", defaultValue: 5 },\n  { inputName: \"bendRadius\", type: \"number\", defaultValue: 30 },\n  \n];\n\nconst mid = bendRadius / Math.sqrt(2);\n\n// Quarter-circle arc path in the XZ plane\nconst path = replicad.draw()\n  .movePointerTo([bendRadius, 0])\n  .threePointsArcTo([0, bendRadius], [mid, mid])\n  .done()\n  .sketchOnPlane(\"XZ\");\n\n// Circular cross-section swept along the path\nconst drawProfile = (plane, origin) => {\n  const profilePlane = new replicad.Plane(origin, [0, 0, -1], plane.zDir);\n  return replicad.drawCircle(tubeRadius).sketchOnPlane(profilePlane);\n};\n\nconst bend = path.sweepSketch(drawProfile, { frenet: true });\n\nreturn {\n  geometry: [bend],\n  dimension: \"3D\",\n  tags: [\"bend\"],\n  color: \"#8a8a8a\",\n  plane: null,\n  bom: []\n};\n"
+                },
+                {
+                  "atomType": "Input",
+                  "x": 0.025384615384615384,
+                  "y": 0.15384615384615385,
+                  "uniqueID": "id-532",
+                  "name": "Tube_radius"
+                },
+                {
+                  "atomType": "Input",
+                  "x": 0.025384615384615384,
+                  "y": 0.24615384615384617,
+                  "uniqueID": "id-533",
+                  "name": "Bend_radius"
+                }
+              ],
+              "allConnectors": [
+                {
+                  "ap2Name": "number or geometry",
+                  "ap1ID": "id-531",
+                  "ap2ID": "id-530"
+                },
+                {
+                  "ap2Name": "tubeRadius",
+                  "ap1ID": "id-532",
+                  "ap2ID": "id-531"
+                },
+                {
+                  "ap2Name": "bendRadius",
+                  "ap1ID": "id-533",
+                  "ap2ID": "id-531"
+                }
+              ],
+              "parentRepo": {
+                "privateRepo": false,
+                "repoName": "Solid-rod-bent-corner",
+                "dateCreated": "2026-04-07T16:51:11Z",
+                "readMe": "https://raw.githubusercontent.com/alzatin/Solid-rod-bent-corner/master/README.md?sanitize=true",
+                "yyyy": 2026,
+                "topMoleculeID": "id-429",
+                "githubMoleculesUsed": [],
+                "html_url": "https://github.com/alzatin/Solid-rod-bent-corner",
+                "topics": [
+                  "hardware"
+                ],
+                "parentRepo": null,
+                "forks": 0,
+                "dateModified": "739713",
+                "ranking": 0,
+                "searchField": "solid-rod-bent-corner alzatin  hardware",
+                "owner": "alzatin",
+                "description": "",
+                "contentURL": "https://raw.githubusercontent.com/alzatin/Solid-rod-bent-corner/master/project.abundance?sanitize=true",
+                "svgURL": "https://raw.githubusercontent.com/alzatin/Solid-rod-bent-corner/master/project.svg?sanitize=true",
+                "isLocal": false
+              },
+              "unitsKey": "Unitless",
+              "fileTypeVersion": 1
+            },
+            {
+              "atomType": "Input",
+              "x": 0.025384615384615384,
+              "y": 0.15384615384615385,
+              "uniqueID": "id-546",
+              "name": "Hole_diam",
+              "type": "number"
+            },
+            {
               "atomType": "Circle",
-              "x": 0.15090403337969402,
-              "y": 0.5434782608695652,
-              "uniqueID": "id-386",
+              "x": 0.2954739538855679,
+              "y": 0.6832298136645962,
+              "uniqueID": "id-549",
               "ioValues": [
                 {
                   "name": "diameter",
-                  "ioValue": 10
+                  "ioValue": 0.25
                 }
               ]
             },
             {
-              "atomType": "Code",
-              "x": 0.5152990264255911,
-              "y": 0.45652173913043476,
-              "uniqueID": "id-421",
+              "atomType": "Move",
+              "x": 0.42186165670367204,
+              "y": 0.6459627329192547,
+              "uniqueID": "id-552",
               "ioValues": [
                 {
-                  "name": "tubeRadius",
-                  "ioValue": 7,
-                  "currentEquation": "7"
+                  "name": "geometry",
+                  "ioValue": "__GEOMETRY_INPUT__"
                 },
                 {
-                  "name": "bendRadius",
-                  "ioValue": 20,
-                  "currentEquation": "20"
+                  "name": "xDist",
+                  "ioValue": 0.5,
+                  "currentEquation": ".5"
+                },
+                {
+                  "name": "yDist",
+                  "ioValue": 0,
+                  "currentEquation": "0"
+                },
+                {
+                  "name": "zDist",
+                  "ioValue": 0
+                }
+              ]
+            },
+            {
+              "atomType": "Extrude",
+              "x": 0.5491033304867635,
+              "y": 0.639751552795031,
+              "uniqueID": "id-558",
+              "ioValues": [
+                {
+                  "name": "geometry",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                },
+                {
+                  "name": "height",
+                  "ioValue": -3,
+                  "currentEquation": "-3"
+                }
+              ]
+            },
+            {
+              "atomType": "Fusion",
+              "x": 0.7164816396242528,
+              "y": 0.32608695652173914,
+              "uniqueID": "id-562",
+              "ioValues": [
+                {
+                  "name": "Shape 2",
+                  "ioValue": {
+                    "geometry": "695a06e8-0.125-0.5-0",
+                    "dimension": "3D",
+                    "tags": [
+                      "bend"
+                    ],
+                    "color": "#8a8a8a",
+                    "plane": {
+                      "origin": [
+                        0,
+                        0,
+                        0
+                      ],
+                      "xDir": [
+                        1,
+                        0,
+                        0
+                      ],
+                      "normal": [
+                        0,
+                        0,
+                        1
+                      ]
+                    },
+                    "bom": []
+                  }
                 }
               ],
-              "codeVersion": 1,
-              "code": "const Inputs = [\n  { inputName: \"tubeRadius\", type: \"number\", defaultValue: 5 },\n  { inputName: \"bendRadius\", type: \"number\", defaultValue: 30 }\n];\n\nconst mid = bendRadius / Math.sqrt(2);\n\n// Quarter-circle arc path in the XZ plane\nconst path = replicad.draw()\n  .movePointerTo([bendRadius, 0])\n  .threePointsArcTo([0, bendRadius], [mid, mid])\n  .done()\n  .sketchOnPlane(\"XZ\");\n\n// Circular cross-section swept along the path\nconst drawProfile = (plane, origin) => {\n  const profilePlane = new replicad.Plane(origin, [0, 0, -1], plane.zDir);\n  return replicad.drawCircle(tubeRadius).sketchOnPlane(profilePlane);\n};\n\nconst bend = path.sweepSketch(drawProfile, { frenet: true });\n\nreturn {\n  geometry: [bend],\n  dimension: \"3D\",\n  tags: [\"bend\"],\n  color: \"#8a8a8a\",\n  plane: null,\n  bom: []\n};"
+              "unionType": "Fusion"
+            },
+            {
+              "atomType": "GitHubMolecule",
+              "x": 0.6131511528608027,
+              "y": 0.639751552795031,
+              "uniqueID": "id-574",
+              "name": "threaded-rod",
+              "ioValues": [
+                {
+                  "name": "diameter",
+                  "ioValue": 0.5,
+                  "currentEquation": ".5"
+                },
+                {
+                  "name": "Length",
+                  "ioValue": 20,
+                  "currentEquation": "20"
+                },
+                {
+                  "name": "pitch",
+                  "ioValue": 0.5,
+                  "currentEquation": ".5"
+                },
+                {
+                  "name": "toothside",
+                  "ioValue": 0.6,
+                  "currentEquation": "0.6"
+                }
+              ],
+              "topLevel": false,
+              "allAtoms": [
+                {
+                  "atomType": "Output",
+                  "x": 0.98,
+                  "y": 0.5,
+                  "uniqueID": "id-568",
+                  "ioValues": [
+                    {
+                      "name": "number or geometry",
+                      "ioValue": "__GEOMETRY_INPUT__"
+                    }
+                  ]
+                },
+                {
+                  "atomType": "Code",
+                  "x": 0.5326842837273992,
+                  "y": 0.4751552795031056,
+                  "uniqueID": "id-569",
+                  "ioValues": [
+                    {
+                      "name": "diameter",
+                      "ioValue": 0.5
+                    },
+                    {
+                      "name": "length",
+                      "ioValue": 20
+                    },
+                    {
+                      "name": "pitch",
+                      "ioValue": 0.5
+                    },
+                    {
+                      "name": "toothSide",
+                      "ioValue": 0.6
+                    }
+                  ],
+                  "codeVersion": 1,
+                  "code": "const Inputs = [\n  { inputName: \"diameter\", type: \"number\", defaultValue: 10 },\n  { inputName: \"length\", type: \"number\", defaultValue: 30 },\n  { inputName: \"pitch\", type: \"number\", defaultValue: 2 },\n  { inputName: \"toothSide\", type: \"number\", defaultValue: 0.6 }\n];\n\nconst innerRadius = diameter / 2;\n\n// Draw the thread profile: a triangle swept along a helix\nconst drawProfile = (plane, origin) => {\n  const originPlane = new replicad.Plane(origin, [0, 0, -1], plane.zDir);\n  return replicad.draw()\n    .hLine(-toothSide)\n    .polarLine(toothSide, 60)\n    .close()\n    .sketchOnPlane(originPlane);\n};\n\nconst threadHelix = replicad.sketchHelix(\n  pitch,\n  length,\n  innerRadius,\n  [0, 0, 0],\n  [0, 0, 1],\n  false\n);\n\nconst thread = threadHelix.sweepSketch(drawProfile, { frenet: true });\n\n// Main cylinder shaft - rotate 2 degrees to avoid seam collision with thread start\nconst shaft = replicad.makeCylinder(innerRadius, length).rotate(2);\n\n// Fuse with sameFace optimisation to prevent kernel errors at the junction\nconst screw = shaft.fuse(thread, { optimisation: \"sameFace\" });\n\nreturn {\n  geometry: [screw],\n  dimension: \"3D\",\n  tags: [\"screw\"],\n  color: \"#8a8a8a\",\n  plane: null,\n  bom: []\n};"
+                },
+                {
+                  "atomType": "Input",
+                  "x": 0.025384615384615384,
+                  "y": 0.15384615384615385,
+                  "uniqueID": "id-570",
+                  "name": "diameter"
+                },
+                {
+                  "atomType": "Input",
+                  "x": 0.025384615384615384,
+                  "y": 0.24615384615384617,
+                  "uniqueID": "id-571",
+                  "name": "Length"
+                },
+                {
+                  "atomType": "Input",
+                  "x": 0.025384615384615384,
+                  "y": 0.3384615384615385,
+                  "uniqueID": "id-572",
+                  "name": "pitch"
+                },
+                {
+                  "atomType": "Input",
+                  "x": 0.025384615384615384,
+                  "y": 0.4307692307692308,
+                  "uniqueID": "id-573",
+                  "name": "toothside"
+                }
+              ],
+              "allConnectors": [
+                {
+                  "ap2Name": "number or geometry",
+                  "ap1ID": "id-569",
+                  "ap2ID": "id-568"
+                },
+                {
+                  "ap2Name": "diameter",
+                  "ap1ID": "id-570",
+                  "ap2ID": "id-569"
+                },
+                {
+                  "ap2Name": "length",
+                  "ap1ID": "id-571",
+                  "ap2ID": "id-569"
+                },
+                {
+                  "ap2Name": "pitch",
+                  "ap1ID": "id-572",
+                  "ap2ID": "id-569"
+                },
+                {
+                  "ap2Name": "toothSide",
+                  "ap1ID": "id-573",
+                  "ap2ID": "id-569"
+                }
+              ],
+              "parentRepo": {
+                "privateRepo": false,
+                "repoName": "threaded-rod",
+                "dateCreated": "2026-04-07T16:22:24Z",
+                "readMe": "https://raw.githubusercontent.com/alzatin/threaded-rod/master/README.md?sanitize=true",
+                "yyyy": 2026,
+                "topMoleculeID": "id-396",
+                "githubMoleculesUsed": [],
+                "html_url": "https://github.com/alzatin/threaded-rod",
+                "topics": [
+                  "hardware",
+                  "thread",
+                  "threading"
+                ],
+                "parentRepo": null,
+                "forks": 0,
+                "dateModified": "739713",
+                "ranking": 0,
+                "searchField": "threaded-rod alzatin a molecule that results in a threaded cylinder hardware thread threading",
+                "owner": "alzatin",
+                "description": "A molecule that results in a threaded cylinder",
+                "contentURL": "https://raw.githubusercontent.com/alzatin/threaded-rod/master/project.abundance?sanitize=true",
+                "svgURL": "https://raw.githubusercontent.com/alzatin/threaded-rod/master/project.svg?sanitize=true",
+                "isLocal": false
+              },
+              "unitsKey": "Unitless",
+              "fileTypeVersion": 1
             }
           ],
-          "allConnectors": [],
+          "allConnectors": [
+            {
+              "ap2Name": "Shape 2",
+              "ap1ID": "id-534",
+              "ap2ID": "id-562"
+            },
+            {
+              "ap2Name": "diameter",
+              "ap1ID": "id-546",
+              "ap2ID": "id-549"
+            },
+            {
+              "ap2Name": "geometry",
+              "ap1ID": "id-549",
+              "ap2ID": "id-552"
+            },
+            {
+              "ap2Name": "geometry",
+              "ap1ID": "id-552",
+              "ap2ID": "id-558"
+            }
+          ],
           "fileTypeVersion": 1
         }
       ],
-      "allConnectors": [],
+      "allConnectors": [
+        {
+          "ap2Name": "Hole_diam",
+          "ap1ID": "id-253",
+          "ap2ID": "id-382"
+        }
+      ],
       "fileTypeVersion": 1
-    },
-    {
-      "atomType": "Input",
-      "x": 0.025384615384615384,
-      "y": 0.5434782608695652,
-      "uniqueID": "id-247",
-      "name": "Hole_diam"
     }
   ],
   "allConnectors": [
