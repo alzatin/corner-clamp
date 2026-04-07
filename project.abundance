@@ -55,8 +55,8 @@
     },
     {
       "atomType": "ExtractTag",
-      "x": 0.5670367207514945,
-      "y": 0.7577639751552795,
+      "x": 0.4184457728437233,
+      "y": 0.7298136645962733,
       "uniqueID": "id-2440",
       "name": "Extract Tag",
       "ioValues": [
@@ -1574,14 +1574,15 @@
                 },
                 {
                   "name": "height",
-                  "ioValue": 0.7
+                  "ioValue": 0.5,
+                  "currentEquation": "0.5"
                 }
               ]
             },
             {
               "atomType": "Assembly",
-              "x": 0.7540563620836891,
-              "y": 0.6925465838509317,
+              "x": 0.7557643040136635,
+              "y": 0.7267080745341615,
               "uniqueID": "id-2416",
               "ioValues": [
                 {
@@ -1596,8 +1597,8 @@
             },
             {
               "atomType": "Tag",
-              "x": 0.6174210076857387,
-              "y": 0.5652173913043479,
+              "x": 0.6225448334756618,
+              "y": 0.5527950310559007,
               "uniqueID": "id-2421",
               "name": "Handle",
               "ioValues": [
@@ -1612,8 +1613,8 @@
             },
             {
               "atomType": "ExtractTag",
-              "x": 0.7813834329632793,
-              "y": 0.3322981366459627,
+              "x": 0.7856532877882152,
+              "y": 0.34782608695652173,
               "uniqueID": "id-2424",
               "name": "Extract Tag",
               "ioValues": [
@@ -2038,8 +2039,8 @@
               "ioValues": [
                 {
                   "name": "Diam",
-                  "ioValue": 0.375,
-                  "currentEquation": "3/8"
+                  "ioValue": 5.8,
+                  "currentEquation": "5.8"
                 },
                 {
                   "name": "E",
@@ -2103,7 +2104,7 @@
                   "ioValues": [
                     {
                       "name": "diameter",
-                      "ioValue": 0.375
+                      "ioValue": 5.8
                     }
                   ]
                 },
@@ -2645,6 +2646,36 @@
         }
       ],
       "fileTypeVersion": 1
+    },
+    {
+      "atomType": "Export",
+      "x": 0.5183603757472246,
+      "y": 0.7732919254658385,
+      "uniqueID": "id-2794",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "File Type",
+          "ioValue": "STL",
+          "currentEquation": "STL"
+        },
+        {
+          "name": "Resolution (dpi)",
+          "ioValue": 96
+        },
+        {
+          "name": "Part Name",
+          "ioValue": "handle_clamp_1/2",
+          "currentEquation": "handle_clamp_1/2"
+        }
+      ],
+      "type": null,
+      "resolution": 96,
+      "importIndex": 0,
+      "partName": "handle_clamp_1/2"
     }
   ],
   "allConnectors": [
@@ -2667,6 +2698,11 @@
       "ap2Name": "Hole_diam",
       "ap1ID": "id-247",
       "ap2ID": "id-243"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-2440",
+      "ap2ID": "id-2794"
     },
     {
       "ap2Name": "number or geometry",
