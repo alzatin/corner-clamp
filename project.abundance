@@ -746,255 +746,27 @@
               ]
             },
             {
-              "atomType": "Move",
-              "x": 0.4040333796940195,
-              "y": 0.36024844720496896,
-              "uniqueID": "id-389",
+              "atomType": "Code",
+              "x": 0.5152990264255911,
+              "y": 0.45652173913043476,
+              "uniqueID": "id-421",
               "ioValues": [
                 {
-                  "name": "geometry",
-                  "ioValue": "__GEOMETRY_INPUT__"
+                  "name": "tubeRadius",
+                  "ioValue": 7,
+                  "currentEquation": "7"
                 },
                 {
-                  "name": "xDist",
-                  "ioValue": -5,
-                  "currentEquation": "-5"
-                },
-                {
-                  "name": "yDist",
-                  "ioValue": 0,
-                  "currentEquation": "0"
-                },
-                {
-                  "name": "zDist",
-                  "ioValue": 5,
-                  "currentEquation": "5"
-                }
-              ]
-            },
-            {
-              "atomType": "Rotate",
-              "x": 0.3198887343532684,
-              "y": 0.3726708074534162,
-              "uniqueID": "id-395",
-              "ioValues": [
-                {
-                  "name": "geometry",
-                  "ioValue": "__GEOMETRY_INPUT__"
-                },
-                {
-                  "name": "x-axis degrees",
-                  "ioValue": 0
-                },
-                {
-                  "name": "y-axis degrees",
-                  "ioValue": 90,
-                  "currentEquation": "90"
-                },
-                {
-                  "name": "z-axis degrees",
-                  "ioValue": 0,
-                  "currentEquation": "0"
-                }
-              ]
-            },
-            {
-              "atomType": "Loft",
-              "x": 0.5521557719054242,
-              "y": 0.5962732919254659,
-              "uniqueID": "id-401",
-              "ioValues": [
-                {
-                  "name": "Shape 3",
-                  "ioValue": "__GEOMETRY_INPUT__"
-                },
-                {
-                  "name": "Shape 4",
-                  "ioValue": "__GEOMETRY_INPUT__"
-                },
-                {
-                  "name": "Shape 5",
-                  "ioValue": "__GEOMETRY_INPUT__"
-                },
-                {
-                  "name": "Shape 6",
-                  "ioValue": "__GEOMETRY_INPUT__"
-                },
-                {
-                  "name": "Shape 3",
-                  "ioValue": {
-                    "geometry": "circle-5",
-                    "dimension": "2D",
-                    "tags": [],
-                    "plane": {
-                      "origin": [
-                        0,
-                        0,
-                        0
-                      ],
-                      "xDir": [
-                        1,
-                        0,
-                        0
-                      ],
-                      "normal": [
-                        0,
-                        0,
-                        1
-                      ]
-                    },
-                    "color": "#aad7f2",
-                    "bom": []
-                  }
-                },
-                {
-                  "name": "Shape 4",
-                  "ioValue": {
-                    "geometry": "move-rotate-circle-5-0-0-0--5-0-0",
-                    "dimension": "2D",
-                    "tags": [],
-                    "plane": {
-                      "origin": [
-                        3.5355339059327373,
-                        0,
-                        3.5355339059327378
-                      ],
-                      "xDir": [
-                        0.7071067811865476,
-                        0,
-                        -0.7071067811865475
-                      ],
-                      "normal": [
-                        0.7071067811865475,
-                        0,
-                        0.7071067811865476
-                      ]
-                    },
-                    "color": "#aad7f2",
-                    "bom": []
-                  }
-                },
-                {
-                  "name": "Shape 5",
-                  "ioValue": {
-                    "geometry": "move-rotate-circle-5-0-0-0--5-0-0",
-                    "dimension": "2D",
-                    "tags": [],
-                    "plane": {
-                      "origin": [
-                        5,
-                        0,
-                        5.551115123125783e-16
-                      ],
-                      "xDir": [
-                        1.1102230246251565e-16,
-                        0,
-                        -1
-                      ],
-                      "normal": [
-                        1,
-                        0,
-                        1.1102230246251565e-16
-                      ]
-                    },
-                    "color": "#aad7f2",
-                    "bom": []
-                  }
-                },
-                {
-                  "name": "Shape 6",
-                  "ioValue": null
+                  "name": "bendRadius",
+                  "ioValue": 20,
+                  "currentEquation": "20"
                 }
               ],
-              "closedSelection": 0
-            },
-            {
-              "atomType": "Rotate",
-              "x": 0.3240611961057024,
-              "y": 0.717391304347826,
-              "uniqueID": "id-406",
-              "ioValues": [
-                {
-                  "name": "geometry",
-                  "ioValue": "__GEOMETRY_INPUT__"
-                },
-                {
-                  "name": "x-axis degrees",
-                  "ioValue": 0
-                },
-                {
-                  "name": "y-axis degrees",
-                  "ioValue": 45,
-                  "currentEquation": "45"
-                },
-                {
-                  "name": "z-axis degrees",
-                  "ioValue": 0
-                }
-              ]
-            },
-            {
-              "atomType": "Move",
-              "x": 0.41655076495132126,
-              "y": 0.7888198757763976,
-              "uniqueID": "id-415",
-              "ioValues": [
-                {
-                  "name": "geometry",
-                  "ioValue": "__GEOMETRY_INPUT__"
-                },
-                {
-                  "name": "xDist",
-                  "ioValue": -5
-                },
-                {
-                  "name": "yDist",
-                  "ioValue": 0
-                },
-                {
-                  "name": "zDist",
-                  "ioValue": 5
-                }
-              ]
+              "codeVersion": 1,
+              "code": "const Inputs = [\n  { inputName: \"tubeRadius\", type: \"number\", defaultValue: 5 },\n  { inputName: \"bendRadius\", type: \"number\", defaultValue: 30 }\n];\n\nconst mid = bendRadius / Math.sqrt(2);\n\n// Quarter-circle arc path in the XZ plane\nconst path = replicad.draw()\n  .movePointerTo([bendRadius, 0])\n  .threePointsArcTo([0, bendRadius], [mid, mid])\n  .done()\n  .sketchOnPlane(\"XZ\");\n\n// Circular cross-section swept along the path\nconst drawProfile = (plane, origin) => {\n  const profilePlane = new replicad.Plane(origin, [0, 0, -1], plane.zDir);\n  return replicad.drawCircle(tubeRadius).sketchOnPlane(profilePlane);\n};\n\nconst bend = path.sweepSketch(drawProfile, { frenet: true });\n\nreturn {\n  geometry: [bend],\n  dimension: \"3D\",\n  tags: [\"bend\"],\n  color: \"#8a8a8a\",\n  plane: null,\n  bom: []\n};"
             }
           ],
-          "allConnectors": [
-            {
-              "ap2Name": "geometry",
-              "ap1ID": "id-386",
-              "ap2ID": "id-395"
-            },
-            {
-              "ap2Name": "geometry",
-              "ap1ID": "id-386",
-              "ap2ID": "id-406"
-            },
-            {
-              "ap2Name": "Shape 3",
-              "ap1ID": "id-386",
-              "ap2ID": "id-401"
-            },
-            {
-              "ap2Name": "Shape 5",
-              "ap1ID": "id-389",
-              "ap2ID": "id-401"
-            },
-            {
-              "ap2Name": "geometry",
-              "ap1ID": "id-395",
-              "ap2ID": "id-389"
-            },
-            {
-              "ap2Name": "geometry",
-              "ap1ID": "id-406",
-              "ap2ID": "id-415"
-            },
-            {
-              "ap2Name": "Shape 4",
-              "ap1ID": "id-415",
-              "ap2ID": "id-401"
-            }
-          ],
+          "allConnectors": [],
           "fileTypeVersion": 1
         }
       ],
