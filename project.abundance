@@ -55,8 +55,8 @@
     },
     {
       "atomType": "Export",
-      "x": 0.6345004269854825,
-      "y": 0.25155279503105593,
+      "x": 0.7532023911187019,
+      "y": 0.20186335403726707,
       "uniqueID": "id-1759",
       "ioValues": [
         {
@@ -85,14 +85,15 @@
     },
     {
       "atomType": "GitHubMolecule",
-      "x": 0.4824935952177626,
-      "y": 0.5341614906832298,
+      "x": 0.49786507258753204,
+      "y": 0.2795031055900621,
       "uniqueID": "id-1741",
       "name": "threaded-rod",
       "ioValues": [
         {
           "name": "diameter",
-          "ioValue": 0.25
+          "ioValue": 0.5,
+          "currentEquation": "0.5"
         },
         {
           "name": "Length",
@@ -130,7 +131,7 @@
           "ioValues": [
             {
               "name": "diameter",
-              "ioValue": 0.25
+              "ioValue": 0.5
             },
             {
               "name": "length",
@@ -858,7 +859,7 @@
     },
     {
       "atomType": "Molecule",
-      "x": 0.25362937660119556,
+      "x": 0.24850555081127243,
       "y": 0.5527950310559007,
       "uniqueID": "id-243",
       "name": "Clamp_piece",
@@ -1591,8 +1592,8 @@
     },
     {
       "atomType": "Extrude",
-      "x": 0.5636208368915457,
-      "y": 0.7267080745341615,
+      "x": 0.6208368915456874,
+      "y": 0.7857142857142857,
       "uniqueID": "id-1959",
       "ioValues": [
         {
@@ -1601,9 +1602,173 @@
         },
         {
           "name": "height",
-          "ioValue": 10
+          "ioValue": 0.75,
+          "currentEquation": ".75"
         }
       ]
+    },
+    {
+      "atomType": "Assembly",
+      "x": 0.8249359521776259,
+      "y": 0.39751552795031053,
+      "uniqueID": "id-1963",
+      "ioValues": [
+        {
+          "name": "Shape 2",
+          "ioValue": null
+        },
+        {
+          "name": "Shape 4",
+          "ioValue": null
+        }
+      ]
+    },
+    {
+      "atomType": "Fusion",
+      "x": 0.5815542271562767,
+      "y": 0.35403726708074534,
+      "uniqueID": "id-1969",
+      "ioValues": [
+        {
+          "name": "Shape 2",
+          "ioValue": {
+            "geometry": "e76ae569-0.5-1-0.1-0.05-0",
+            "dimension": "3D",
+            "tags": [
+              "screw"
+            ],
+            "color": "#8a8a8a",
+            "plane": {
+              "origin": [
+                0,
+                0,
+                0
+              ],
+              "xDir": [
+                1,
+                0,
+                0
+              ],
+              "normal": [
+                0,
+                0,
+                1
+              ]
+            },
+            "bom": []
+          }
+        }
+      ],
+      "unionType": "Fusion"
+    },
+    {
+      "atomType": "Difference",
+      "x": 0.7941929974380871,
+      "y": 0.7204968944099379,
+      "uniqueID": "id-1974",
+      "ioValues": [
+        {
+          "name": "geometry1",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "geometry2",
+          "ioValue": "__GEOMETRY_INPUT__"
+        }
+      ]
+    },
+    {
+      "atomType": "Circle",
+      "x": 0.3629376601195559,
+      "y": 0.6863354037267081,
+      "uniqueID": "id-1978",
+      "ioValues": [
+        {
+          "name": "diameter",
+          "ioValue": 0.52,
+          "currentEquation": ".52"
+        }
+      ]
+    },
+    {
+      "atomType": "Extrude",
+      "x": 0.45431255337318527,
+      "y": 0.5124223602484472,
+      "uniqueID": "id-1981",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "height",
+          "ioValue": 2,
+          "currentEquation": "2"
+        }
+      ]
+    },
+    {
+      "atomType": "Fusion",
+      "x": 0.6251067463706235,
+      "y": 0.5217391304347826,
+      "uniqueID": "id-1986",
+      "ioValues": [
+        {
+          "name": "Shape 1",
+          "ioValue": {
+            "geometry": "e76ae569-0.5-1-0.1-0.05-0",
+            "tags": [],
+            "bom": [],
+            "plane": {
+              "origin": [
+                0,
+                0,
+                0
+              ],
+              "xDir": [
+                1,
+                0,
+                0
+              ],
+              "normal": [
+                0,
+                0,
+                1
+              ]
+            },
+            "color": "#aad7f2",
+            "dimension": "3D"
+          }
+        },
+        {
+          "name": "Shape 2",
+          "ioValue": {
+            "geometry": "extrude-circle-0.26-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-2",
+            "dimension": "3D",
+            "tags": [],
+            "plane": {
+              "origin": [
+                0,
+                0,
+                0
+              ],
+              "xDir": [
+                1,
+                0,
+                0
+              ],
+              "normal": [
+                0,
+                0,
+                1
+              ]
+            },
+            "color": "#aad7f2",
+            "bom": []
+          }
+        }
+      ],
+      "unionType": "Fusion"
     }
   ],
   "allConnectors": [
@@ -1633,9 +1798,49 @@
       "ap2ID": "id-1759"
     },
     {
+      "ap2Name": "Shape 2",
+      "ap1ID": "id-1741",
+      "ap2ID": "id-1969"
+    },
+    {
       "ap2Name": "geometry",
       "ap1ID": "id-1955",
       "ap2ID": "id-1959"
+    },
+    {
+      "ap2Name": "Shape 2",
+      "ap1ID": "id-1959",
+      "ap2ID": "id-1963"
+    },
+    {
+      "ap2Name": "geometry1",
+      "ap1ID": "id-1959",
+      "ap2ID": "id-1974"
+    },
+    {
+      "ap2Name": "Shape 4",
+      "ap1ID": "id-1969",
+      "ap2ID": "id-1963"
+    },
+    {
+      "ap2Name": "geometry2",
+      "ap1ID": "id-1969",
+      "ap2ID": "id-1974"
+    },
+    {
+      "ap2Name": "Shape 1",
+      "ap1ID": "id-1969",
+      "ap2ID": "id-1986"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-1978",
+      "ap2ID": "id-1981"
+    },
+    {
+      "ap2Name": "Shape 2",
+      "ap1ID": "id-1981",
+      "ap2ID": "id-1986"
     }
   ],
   "unitsKey": "Inches",
