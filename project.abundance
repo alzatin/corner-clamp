@@ -785,8 +785,8 @@
         },
         {
           "atomType": "ShrinkWrap",
-          "x": 0.29888983774551664,
-          "y": 0.5496894409937888,
+          "x": 0.30059777967549106,
+          "y": 0.562111801242236,
           "uniqueID": "id-1544",
           "name": "Shrink Wrap",
           "ioValues": [
@@ -1337,6 +1337,30 @@
               "ap2ID": "id-1374"
             }
           ],
+          "fileTypeVersion": 1
+        },
+        {
+          "atomType": "Molecule",
+          "x": 0.32536293766011953,
+          "y": 0.8167701863354037,
+          "uniqueID": "id-1999",
+          "name": "Handle piece",
+          "topLevel": false,
+          "allAtoms": [
+            {
+              "atomType": "Output",
+              "x": 0.98,
+              "y": 0.5,
+              "uniqueID": "id-2001",
+              "ioValues": [
+                {
+                  "name": "number or geometry",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                }
+              ]
+            }
+          ],
+          "allConnectors": [],
           "fileTypeVersion": 1
         }
       ],
