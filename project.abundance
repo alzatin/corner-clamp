@@ -55,8 +55,8 @@
     },
     {
       "atomType": "Export",
-      "x": 0.7532023911187019,
-      "y": 0.20186335403726707,
+      "x": 0.7480785653287788,
+      "y": 0.2670807453416149,
       "uniqueID": "id-1759",
       "ioValues": [
         {
@@ -78,7 +78,7 @@
           "currentEquation": "corner-clamp"
         }
       ],
-      "type": null,
+      "type": "STL",
       "resolution": 96,
       "importIndex": 0,
       "partName": "corner-clamp"
@@ -1625,8 +1625,8 @@
     },
     {
       "atomType": "Fusion",
-      "x": 0.5935098206660974,
-      "y": 0.36024844720496896,
+      "x": 0.5926558497011102,
+      "y": 0.3695652173913043,
       "uniqueID": "id-1969",
       "ioValues": [
         {
@@ -1662,31 +1662,15 @@
       "unionType": "Fusion"
     },
     {
-      "atomType": "Difference",
-      "x": 0.7976088812980359,
-      "y": 0.7453416149068324,
-      "uniqueID": "id-1974",
-      "ioValues": [
-        {
-          "name": "geometry1",
-          "ioValue": "__GEOMETRY_INPUT__"
-        },
-        {
-          "name": "geometry2",
-          "ioValue": "__GEOMETRY_INPUT__"
-        }
-      ]
-    },
-    {
       "atomType": "Circle",
-      "x": 0.3817250213492741,
-      "y": 0.6490683229813664,
+      "x": 0.3894107600341588,
+      "y": 0.6335403726708074,
       "uniqueID": "id-1978",
       "ioValues": [
         {
           "name": "diameter",
-          "ioValue": 1,
-          "currentEquation": "1"
+          "ioValue": 0.48,
+          "currentEquation": ".48"
         }
       ]
     },
@@ -1702,15 +1686,15 @@
         },
         {
           "name": "height",
-          "ioValue": 2,
-          "currentEquation": "2"
+          "ioValue": 3,
+          "currentEquation": "3"
         }
       ]
     },
     {
       "atomType": "Fusion",
-      "x": 0.6404782237403929,
-      "y": 0.6832298136645962,
+      "x": 0.6584116140051238,
+      "y": 0.5745341614906833,
       "uniqueID": "id-1986",
       "ioValues": [
         {
@@ -1743,7 +1727,7 @@
         {
           "name": "Shape 2",
           "ioValue": {
-            "geometry": "extrude-circle-0.5-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-2",
+            "geometry": "extrude-circle-0.24-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-3",
             "dimension": "3D",
             "tags": [],
             "plane": {
@@ -1793,11 +1777,6 @@
       "ap2ID": "id-243"
     },
     {
-      "ap2Name": "geometry",
-      "ap1ID": "id-1741",
-      "ap2ID": "id-1759"
-    },
-    {
       "ap2Name": "Shape 2",
       "ap1ID": "id-1741",
       "ap2ID": "id-1969"
@@ -1818,11 +1797,6 @@
       "ap2ID": "id-1963"
     },
     {
-      "ap2Name": "geometry2",
-      "ap1ID": "id-1969",
-      "ap2ID": "id-1974"
-    },
-    {
       "ap2Name": "Shape 1",
       "ap1ID": "id-1969",
       "ap2ID": "id-1986"
@@ -1838,9 +1812,9 @@
       "ap2ID": "id-1986"
     },
     {
-      "ap2Name": "geometry1",
+      "ap2Name": "geometry",
       "ap1ID": "id-1986",
-      "ap2ID": "id-1974"
+      "ap2ID": "id-1759"
     }
   ],
   "unitsKey": "Inches",
