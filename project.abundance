@@ -2138,8 +2138,8 @@
         },
         {
           "atomType": "Molecule",
-          "x": 0.32792485055508114,
-          "y": 0.8354037267080745,
+          "x": 0.3339026473099914,
+          "y": 0.84472049689441,
           "uniqueID": "id-1999",
           "name": "Handle piece",
           "topLevel": false,
@@ -2286,8 +2286,8 @@
             },
             {
               "atomType": "GitHubMolecule",
-              "x": 0.38514090520922284,
-              "y": 0.6149068322981366,
+              "x": 0.3808710503842869,
+              "y": 0.6335403726708074,
               "uniqueID": "id-2256",
               "name": "RotatePattern",
               "ioValues": [
@@ -2690,15 +2690,14 @@
             },
             {
               "atomType": "GitHubMolecule",
-              "x": 0.5046968403074296,
-              "y": 0.7919254658385093,
+              "x": 0.5038428693424424,
+              "y": 0.7670807453416149,
               "uniqueID": "id-2356",
               "name": "Nut_space",
               "ioValues": [
                 {
                   "name": "Diam",
-                  "ioValue": 5.8,
-                  "currentEquation": "5.8"
+                  "ioValue": 0.625
                 },
                 {
                   "name": "E",
@@ -2762,7 +2761,7 @@
                   "ioValues": [
                     {
                       "name": "diameter",
-                      "ioValue": 5.8
+                      "ioValue": 0.625
                     }
                   ]
                 },
