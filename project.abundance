@@ -15,7 +15,8 @@
     },
     {
       "name": "Hole_diam",
-      "ioValue": 0.25
+      "ioValue": 0.375,
+      "currentEquation": "3/8"
     }
   ],
   "topLevel": true,
@@ -70,8 +71,8 @@
     },
     {
       "atomType": "Assembly",
-      "x": 0.7233134073441503,
-      "y": 0.2577639751552795,
+      "x": 0.726729291204099,
+      "y": 0.23602484472049692,
       "uniqueID": "id-2443",
       "ioValues": [
         {
@@ -96,12 +97,12 @@
         },
         {
           "name": "xDist",
-          "ioValue": -0.25,
-          "currentEquation": "-Hole_diam"
+          "ioValue": -0.1875,
+          "currentEquation": "-Hole_diam/2"
         },
         {
           "name": "yDist",
-          "ioValue": 1,
+          "ioValue": 1.5,
           "currentEquation": "Hole_diam * 4"
         },
         {
@@ -157,7 +158,7 @@
         },
         {
           "name": "Hole_diam",
-          "ioValue": 0.25
+          "ioValue": 0.375
         }
       ],
       "topLevel": false,
@@ -206,7 +207,7 @@
           "ioValues": [
             {
               "name": "diameter",
-              "ioValue": 0.25,
+              "ioValue": 0.375,
               "currentEquation": "Hole_diam"
             }
           ]
@@ -279,12 +280,12 @@
             },
             {
               "name": "xDist",
-              "ioValue": 1,
+              "ioValue": 1.5,
               "currentEquation": "Hole_diam *4"
             },
             {
               "name": "yDist",
-              "ioValue": -0.25,
+              "ioValue": -0.375,
               "currentEquation": "-Hole_diam"
             },
             {
@@ -361,7 +362,7 @@
               "ioValues": [
                 {
                   "name": "x length",
-                  "ioValue": 0.5,
+                  "ioValue": 0.75,
                   "currentEquation": "Hole_diam * 2"
                 },
                 {
@@ -383,7 +384,7 @@
                 },
                 {
                   "name": "xDist",
-                  "ioValue": 0.25,
+                  "ioValue": 0.375,
                   "currentEquation": "Hole_diam"
                 },
                 {
@@ -430,7 +431,7 @@
                 {
                   "name": "Shape 1",
                   "ioValue": {
-                    "geometry": "rotate-move-rectangle-0.5-6-0.25-3-0-0-0-90",
+                    "geometry": "rotate-move-rectangle-0.75-6-0.375-3-0-0-0-90",
                     "dimension": "2D",
                     "plane": {
                       "origin": [
@@ -457,7 +458,7 @@
                 {
                   "name": "Shape 2",
                   "ioValue": {
-                    "geometry": "move-rectangle-0.5-6-0.25-3-0",
+                    "geometry": "move-rectangle-0.75-6-0.375-3-0",
                     "dimension": "2D",
                     "plane": {
                       "origin": [
@@ -773,7 +774,7 @@
       "ioValues": [
         {
           "name": "Hole_diam",
-          "ioValue": 0.25
+          "ioValue": 0.375
         }
       ],
       "topLevel": false,
@@ -1066,7 +1067,7 @@
           "ioValues": [
             {
               "name": "Hole_diam",
-              "ioValue": 0.25
+              "ioValue": 0.375
             }
           ],
           "topLevel": false,
@@ -1099,7 +1100,7 @@
               "ioValues": [
                 {
                   "name": "diameter",
-                  "ioValue": 0.25
+                  "ioValue": 0.375
                 }
               ]
             },
@@ -1152,7 +1153,7 @@
                 {
                   "name": "Shape 1",
                   "ioValue": {
-                    "geometry": "695a06e8-0.125-0.5-0",
+                    "geometry": "695a06e8-0.1875-0.5-0",
                     "dimension": "3D",
                     "tags": [
                       "bend"
@@ -1181,7 +1182,7 @@
                 {
                   "name": "Shape 2",
                   "ioValue": {
-                    "geometry": "extrude-move-circle-0.125-0.5-0-0-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}--3",
+                    "geometry": "extrude-move-circle-0.1875-0.5-0-0-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}--3",
                     "dimension": "3D",
                     "tags": [],
                     "plane": {
@@ -1208,7 +1209,7 @@
                 {
                   "name": "Shape 3",
                   "ioValue": {
-                    "geometry": "extrude-move-rotate-circle-0.125-0-0-0--0.5-0-0-{\"origin\":[0,0,0],\"xDir\":[1.1102230246251565e-16,0,-1],\"normal\":[1,0,1.1102230246251565e-16]}--0.5",
+                    "geometry": "extrude-move-rotate-circle-0.1875-0-0-0--0.5-0-0-{\"origin\":[0,0,0],\"xDir\":[1.1102230246251565e-16,0,-1],\"normal\":[1,0,1.1102230246251565e-16]}--0.5",
                     "dimension": "3D",
                     "tags": [],
                     "plane": {
@@ -1243,7 +1244,7 @@
               "ioValues": [
                 {
                   "name": "diameter",
-                  "ioValue": 0.25
+                  "ioValue": 0.375
                 }
               ]
             },
@@ -1320,7 +1321,7 @@
               "ioValues": [
                 {
                   "name": "Tube_radius",
-                  "ioValue": 0.125,
+                  "ioValue": 0.1875,
                   "currentEquation": "Hole_diam/2"
                 },
                 {
@@ -1350,7 +1351,7 @@
                   "ioValues": [
                     {
                       "name": "tubeRadius",
-                      "ioValue": 0.125
+                      "ioValue": 0.1875
                     },
                     {
                       "name": "bendRadius",
@@ -1480,8 +1481,8 @@
         },
         {
           "atomType": "Molecule",
-          "x": 0.33134073441502987,
-          "y": 0.8602484472049688,
+          "x": 0.32450896669513235,
+          "y": 0.8757763975155279,
           "uniqueID": "id-1999",
           "name": "Handle piece",
           "topLevel": false,
