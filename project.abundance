@@ -992,8 +992,8 @@
         },
         {
           "atomType": "Assembly",
-          "x": 0.7395388556789069,
-          "y": 0.47204968944099385,
+          "x": 0.7882152006831767,
+          "y": 0.46583850931677023,
           "uniqueID": "id-1559",
           "ioValues": [
             {
@@ -1060,8 +1060,8 @@
         },
         {
           "atomType": "Molecule",
-          "x": 0.28949615713065757,
-          "y": 0.3167701863354037,
+          "x": 0.29035012809564475,
+          "y": 0.32919254658385094,
           "uniqueID": "id-382",
           "name": "Corner_thread_piece",
           "ioValues": [
@@ -1106,8 +1106,8 @@
             },
             {
               "atomType": "Move",
-              "x": 0.3996584116140051,
-              "y": 0.453416149068323,
+              "x": 0.4013663535439795,
+              "y": 0.46583850931677023,
               "uniqueID": "id-552",
               "ioValues": [
                 {
@@ -1130,8 +1130,8 @@
             },
             {
               "atomType": "Extrude",
-              "x": 0.5029888983774552,
-              "y": 0.5093167701863354,
+              "x": 0.5004269854824935,
+              "y": 0.5124223602484472,
               "uniqueID": "id-558",
               "ioValues": [
                 {
@@ -1329,13 +1329,14 @@
             },
             {
               "atomType": "Circle",
-              "x": 0.13578138343296328,
-              "y": 0.6490683229813664,
+              "x": 0.1332194705380017,
+              "y": 0.6614906832298136,
               "uniqueID": "id-2799",
               "ioValues": [
                 {
                   "name": "diameter",
-                  "ioValue": 1
+                  "ioValue": 1,
+                  "currentEquation": "1"
                 }
               ]
             },
@@ -1444,8 +1445,8 @@
             },
             {
               "atomType": "Extrude",
-              "x": 0.5192143467122118,
-              "y": 0.7018633540372671,
+              "x": 0.5251921434671222,
+              "y": 0.7080745341614907,
               "uniqueID": "id-2802",
               "ioValues": [
                 {
@@ -1460,8 +1461,8 @@
             },
             {
               "atomType": "Assembly",
-              "x": 0.8240819812126389,
-              "y": 0.7267080745341615,
+              "x": 0.7916310845431256,
+              "y": 0.46583850931677023,
               "uniqueID": "id-2820",
               "ioValues": [
                 {
@@ -1471,13 +1472,17 @@
                 {
                   "name": "Shape 2",
                   "ioValue": null
+                },
+                {
+                  "name": "Shape 3",
+                  "ioValue": null
                 }
               ]
             },
             {
               "atomType": "GitHubMolecule",
-              "x": 0.4568744662681469,
-              "y": 0.8322981366459627,
+              "x": 0.42186165670367204,
+              "y": 0.8416149068322982,
               "uniqueID": "id-2852",
               "name": "Nut_space",
               "ioValues": [
@@ -1963,8 +1968,8 @@
             },
             {
               "atomType": "Difference",
-              "x": 0.6310845431255337,
-              "y": 0.8354037267080745,
+              "x": 0.6848847139197267,
+              "y": 0.8012422360248447,
               "uniqueID": "id-2912",
               "ioValues": [
                 {
@@ -1976,6 +1981,60 @@
                   "ioValue": "__GEOMETRY_INPUT__"
                 }
               ]
+            },
+            {
+              "atomType": "Move",
+              "x": 0.5286080273270709,
+              "y": 0.953416149068323,
+              "uniqueID": "id-2917",
+              "ioValues": [
+                {
+                  "name": "geometry",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                },
+                {
+                  "name": "xDist",
+                  "ioValue": 0.5
+                },
+                {
+                  "name": "yDist",
+                  "ioValue": 0
+                },
+                {
+                  "name": "zDist",
+                  "ioValue": 0
+                }
+              ]
+            },
+            {
+              "atomType": "Export",
+              "x": 0.8104184457728437,
+              "y": 0.8322981366459627,
+              "uniqueID": "id-2923",
+              "ioValues": [
+                {
+                  "name": "geometry",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                },
+                {
+                  "name": "File Type",
+                  "ioValue": "STL",
+                  "currentEquation": "STL"
+                },
+                {
+                  "name": "Resolution (dpi)",
+                  "ioValue": 96
+                },
+                {
+                  "name": "Part Name",
+                  "ioValue": "Corner_thread_piece",
+                  "currentEquation": "Corner_thread_piece"
+                }
+              ],
+              "type": null,
+              "resolution": 96,
+              "importIndex": 0,
+              "partName": "Corner_thread_piece"
             }
           ],
           "allConnectors": [
@@ -2050,8 +2109,28 @@
               "ap2ID": "id-2912"
             },
             {
-              "ap2Name": "geometry2",
+              "ap2Name": "number or geometry",
+              "ap1ID": "id-2820",
+              "ap2ID": "id-384"
+            },
+            {
+              "ap2Name": "geometry",
               "ap1ID": "id-2852",
+              "ap2ID": "id-2917"
+            },
+            {
+              "ap2Name": "Shape 3",
+              "ap1ID": "id-2912",
+              "ap2ID": "id-2820"
+            },
+            {
+              "ap2Name": "geometry",
+              "ap1ID": "id-2912",
+              "ap2ID": "id-2923"
+            },
+            {
+              "ap2Name": "geometry2",
+              "ap1ID": "id-2917",
               "ap2ID": "id-2912"
             }
           ],
@@ -2059,8 +2138,8 @@
         },
         {
           "atomType": "Molecule",
-          "x": 0.3330486763450043,
-          "y": 0.8385093167701863,
+          "x": 0.32792485055508114,
+          "y": 0.8354037267080745,
           "uniqueID": "id-1999",
           "name": "Handle piece",
           "topLevel": false,
