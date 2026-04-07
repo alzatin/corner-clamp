@@ -1,13 +1,183 @@
 {
-    "atomType": "Molecule",
-    "x": 0,
-    "y": 0,
-    "uniqueID": "id-224",
-    "name": "corner-clamp",
-    "topLevel": true,
-    "allAtoms": [],
-    "allConnectors": [],
-    "unitsKey": "Inches",
-    "fileTypeVersion": 1,
-    "filetypeVersion": 1
+  "atomType": "Molecule",
+  "x": 0,
+  "y": 0,
+  "uniqueID": "id-224",
+  "name": "corner-clamp",
+  "ioValues": [
+    {
+      "name": "Angle",
+      "ioValue": 90,
+      "currentEquation": "90"
+    },
+    {
+      "name": "Side_Length",
+      "ioValue": 10
+    },
+    {
+      "name": "Hole_diam",
+      "ioValue": 10
+    }
+  ],
+  "topLevel": true,
+  "allAtoms": [
+    {
+      "atomType": "Output",
+      "x": 0.98,
+      "y": 0.5,
+      "uniqueID": "id-225",
+      "ioValues": [
+        {
+          "name": "number or geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        }
+      ]
+    },
+    {
+      "atomType": "Input",
+      "x": 0.025384615384615384,
+      "y": 0.25155279503105593,
+      "uniqueID": "id-227",
+      "name": "Angle"
+    },
+    {
+      "atomType": "Input",
+      "x": 0.025384615384615384,
+      "y": 0.34386048733874824,
+      "uniqueID": "id-230",
+      "name": "Side_Length"
+    },
+    {
+      "atomType": "Molecule",
+      "x": 0.239221140472879,
+      "y": 0.35403726708074534,
+      "uniqueID": "id-233",
+      "name": "Corner_piece",
+      "ioValues": [
+        {
+          "name": "Angle",
+          "ioValue": 90
+        },
+        {
+          "name": "Side_Length",
+          "ioValue": 10
+        },
+        {
+          "name": "Hole_diam",
+          "ioValue": 10
+        }
+      ],
+      "topLevel": false,
+      "allAtoms": [
+        {
+          "atomType": "Output",
+          "x": 0.98,
+          "y": 0.5,
+          "uniqueID": "id-235",
+          "ioValues": [
+            {
+              "name": "number or geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            }
+          ]
+        },
+        {
+          "atomType": "Input",
+          "x": 0.025384615384615384,
+          "y": 0.15384615384615385,
+          "uniqueID": "id-237",
+          "name": "Angle",
+          "type": "number"
+        },
+        {
+          "atomType": "Input",
+          "x": 0.025384615384615384,
+          "y": 0.24615384615384617,
+          "uniqueID": "id-240",
+          "name": "Side_Length",
+          "type": "number"
+        },
+        {
+          "atomType": "Input",
+          "x": 0.025384615384615384,
+          "y": 0.3384615384615385,
+          "uniqueID": "id-250",
+          "name": "Hole_diam",
+          "type": "number"
+        }
+      ],
+      "allConnectors": [],
+      "fileTypeVersion": 1
+    },
+    {
+      "atomType": "Molecule",
+      "x": 0.2301808066759388,
+      "y": 0.6863354037267081,
+      "uniqueID": "id-243",
+      "name": "Clamp_piece",
+      "ioValues": [
+        {
+          "name": "Hole_diam",
+          "ioValue": 10
+        }
+      ],
+      "topLevel": false,
+      "allAtoms": [
+        {
+          "atomType": "Output",
+          "x": 0.98,
+          "y": 0.5,
+          "uniqueID": "id-245",
+          "ioValues": [
+            {
+              "name": "number or geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            }
+          ]
+        },
+        {
+          "atomType": "Input",
+          "x": 0.025384615384615384,
+          "y": 0.15384615384615385,
+          "uniqueID": "id-253",
+          "name": "Hole_diam",
+          "type": "number"
+        }
+      ],
+      "allConnectors": [],
+      "fileTypeVersion": 1
+    },
+    {
+      "atomType": "Input",
+      "x": 0.025384615384615384,
+      "y": 0.5434782608695652,
+      "uniqueID": "id-247",
+      "name": "Hole_diam"
+    }
+  ],
+  "allConnectors": [
+    {
+      "ap2Name": "Angle",
+      "ap1ID": "id-227",
+      "ap2ID": "id-233"
+    },
+    {
+      "ap2Name": "Side_Length",
+      "ap1ID": "id-230",
+      "ap2ID": "id-233"
+    },
+    {
+      "ap2Name": "Hole_diam",
+      "ap1ID": "id-247",
+      "ap2ID": "id-233"
+    },
+    {
+      "ap2Name": "Hole_diam",
+      "ap1ID": "id-247",
+      "ap2ID": "id-243"
+    }
+  ],
+  "unitsKey": "Inches",
+  "fileTypeVersion": 1,
+  "filetypeVersion": 1
 }
