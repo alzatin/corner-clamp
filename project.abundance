@@ -12,11 +12,13 @@
     },
     {
       "name": "Side_Length",
-      "ioValue": 10
+      "ioValue": 6,
+      "currentEquation": "6"
     },
     {
       "name": "Hole_diam",
-      "ioValue": 10
+      "ioValue": 0.25,
+      "currentEquation": ".25"
     }
   ],
   "topLevel": true,
@@ -49,8 +51,8 @@
     },
     {
       "atomType": "Molecule",
-      "x": 0.239221140472879,
-      "y": 0.35403726708074534,
+      "x": 0.24478442280945759,
+      "y": 0.3695652173913043,
       "uniqueID": "id-233",
       "name": "Corner_piece",
       "ioValues": [
@@ -60,11 +62,11 @@
         },
         {
           "name": "Side_Length",
-          "ioValue": 10
+          "ioValue": 6
         },
         {
           "name": "Hole_diam",
-          "ioValue": 10
+          "ioValue": 0.25
         }
       ],
       "topLevel": false,
@@ -104,6 +106,24 @@
           "uniqueID": "id-250",
           "name": "Hole_diam",
           "type": "number"
+        },
+        {
+          "atomType": "Rectangle",
+          "x": 0.26147426981919336,
+          "y": 0.4503105590062112,
+          "uniqueID": "id-257",
+          "ioValues": [
+            {
+              "name": "x length",
+              "ioValue": 0.5,
+              "currentEquation": "Hole_diam * 2"
+            },
+            {
+              "name": "y length",
+              "ioValue": 5,
+              "currentEquation": "5"
+            }
+          ]
         }
       ],
       "allConnectors": [],
@@ -118,7 +138,7 @@
       "ioValues": [
         {
           "name": "Hole_diam",
-          "ioValue": 10
+          "ioValue": 0.25
         }
       ],
       "topLevel": false,
