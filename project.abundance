@@ -948,30 +948,27 @@
             },
             {
               "atomType": "GitHubMolecule",
-              "x": 0.6131511528608027,
-              "y": 0.639751552795031,
-              "uniqueID": "id-574",
+              "x": 0.6857386848847139,
+              "y": 0.6366459627329192,
+              "uniqueID": "id-599",
               "name": "threaded-rod",
               "ioValues": [
                 {
                   "name": "diameter",
-                  "ioValue": 0.5,
-                  "currentEquation": ".5"
+                  "ioValue": 0.5
                 },
                 {
                   "name": "Length",
-                  "ioValue": 20,
-                  "currentEquation": "20"
+                  "ioValue": 3
                 },
                 {
                   "name": "pitch",
-                  "ioValue": 0.5,
-                  "currentEquation": ".5"
+                  "ioValue": 0.05,
+                  "currentEquation": "1/20"
                 },
                 {
                   "name": "toothside",
-                  "ioValue": 0.6,
-                  "currentEquation": "0.6"
+                  "ioValue": 0.05
                 }
               ],
               "topLevel": false,
@@ -980,7 +977,7 @@
                   "atomType": "Output",
                   "x": 0.98,
                   "y": 0.5,
-                  "uniqueID": "id-568",
+                  "uniqueID": "id-593",
                   "ioValues": [
                     {
                       "name": "number or geometry",
@@ -992,7 +989,7 @@
                   "atomType": "Code",
                   "x": 0.5326842837273992,
                   "y": 0.4751552795031056,
-                  "uniqueID": "id-569",
+                  "uniqueID": "id-594",
                   "ioValues": [
                     {
                       "name": "diameter",
@@ -1000,15 +997,15 @@
                     },
                     {
                       "name": "length",
-                      "ioValue": 20
+                      "ioValue": 3
                     },
                     {
                       "name": "pitch",
-                      "ioValue": 0.5
+                      "ioValue": 0.05
                     },
                     {
                       "name": "toothSide",
-                      "ioValue": 0.6
+                      "ioValue": 0.05
                     }
                   ],
                   "codeVersion": 1,
@@ -1018,56 +1015,56 @@
                   "atomType": "Input",
                   "x": 0.025384615384615384,
                   "y": 0.15384615384615385,
-                  "uniqueID": "id-570",
+                  "uniqueID": "id-595",
                   "name": "diameter"
                 },
                 {
                   "atomType": "Input",
                   "x": 0.025384615384615384,
                   "y": 0.24615384615384617,
-                  "uniqueID": "id-571",
+                  "uniqueID": "id-596",
                   "name": "Length"
                 },
                 {
                   "atomType": "Input",
                   "x": 0.025384615384615384,
                   "y": 0.3384615384615385,
-                  "uniqueID": "id-572",
+                  "uniqueID": "id-597",
                   "name": "pitch"
                 },
                 {
                   "atomType": "Input",
                   "x": 0.025384615384615384,
                   "y": 0.4307692307692308,
-                  "uniqueID": "id-573",
+                  "uniqueID": "id-598",
                   "name": "toothside"
                 }
               ],
               "allConnectors": [
                 {
                   "ap2Name": "number or geometry",
-                  "ap1ID": "id-569",
-                  "ap2ID": "id-568"
+                  "ap1ID": "id-594",
+                  "ap2ID": "id-593"
                 },
                 {
                   "ap2Name": "diameter",
-                  "ap1ID": "id-570",
-                  "ap2ID": "id-569"
+                  "ap1ID": "id-595",
+                  "ap2ID": "id-594"
                 },
                 {
                   "ap2Name": "length",
-                  "ap1ID": "id-571",
-                  "ap2ID": "id-569"
+                  "ap1ID": "id-596",
+                  "ap2ID": "id-594"
                 },
                 {
                   "ap2Name": "pitch",
-                  "ap1ID": "id-572",
-                  "ap2ID": "id-569"
+                  "ap1ID": "id-597",
+                  "ap2ID": "id-594"
                 },
                 {
                   "ap2Name": "toothSide",
-                  "ap1ID": "id-573",
-                  "ap2ID": "id-569"
+                  "ap1ID": "id-598",
+                  "ap2ID": "id-594"
                 }
               ],
               "parentRepo": {
