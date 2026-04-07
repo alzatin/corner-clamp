@@ -55,8 +55,8 @@
     },
     {
       "atomType": "Molecule",
-      "x": 0.2524339360222531,
-      "y": 0.4472049689440994,
+      "x": 0.24594363791631085,
+      "y": 0.2919254658385093,
       "uniqueID": "id-233",
       "name": "Corner_piece",
       "ioValues": [
@@ -342,57 +342,11 @@
               "ioValues": [
                 {
                   "name": "Shape 1",
-                  "ioValue": {
-                    "geometry": "rotate-move-rectangle-0.5-6-0.25-3-0-0-0-90",
-                    "dimension": "2D",
-                    "plane": {
-                      "origin": [
-                        0,
-                        0,
-                        0
-                      ],
-                      "xDir": [
-                        1,
-                        0,
-                        0
-                      ],
-                      "normal": [
-                        0,
-                        0,
-                        1
-                      ]
-                    },
-                    "color": "#aad7f2",
-                    "tags": [],
-                    "bom": []
-                  }
+                  "ioValue": null
                 },
                 {
                   "name": "Shape 2",
-                  "ioValue": {
-                    "geometry": "move-rectangle-0.5-6-0.25-3-0",
-                    "dimension": "2D",
-                    "plane": {
-                      "origin": [
-                        0,
-                        0,
-                        0
-                      ],
-                      "xDir": [
-                        1,
-                        0,
-                        0
-                      ],
-                      "normal": [
-                        0,
-                        0,
-                        1
-                      ]
-                    },
-                    "color": "#aad7f2",
-                    "tags": [],
-                    "bom": []
-                  }
+                  "ioValue": null
                 }
               ],
               "unionType": "Fusion"
@@ -679,8 +633,8 @@
     },
     {
       "atomType": "Molecule",
-      "x": 0.2273991655076495,
-      "y": 0.6863354037267081,
+      "x": 0.2809564474807857,
+      "y": 0.6583850931677019,
       "uniqueID": "id-243",
       "name": "Clamp_piece",
       "ioValues": [
@@ -738,6 +692,79 @@
               ]
             },
             {
+              "atomType": "Input",
+              "x": 0.025384615384615384,
+              "y": 0.15384615384615385,
+              "uniqueID": "id-546",
+              "name": "Hole_diam",
+              "type": "number"
+            },
+            {
+              "atomType": "Circle",
+              "x": 0.2954739538855679,
+              "y": 0.6832298136645962,
+              "uniqueID": "id-549",
+              "ioValues": [
+                {
+                  "name": "diameter",
+                  "ioValue": 0.25
+                }
+              ]
+            },
+            {
+              "atomType": "Move",
+              "x": 0.42186165670367204,
+              "y": 0.6459627329192547,
+              "uniqueID": "id-552",
+              "ioValues": [
+                {
+                  "name": "geometry",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                },
+                {
+                  "name": "xDist",
+                  "ioValue": 0.5
+                },
+                {
+                  "name": "yDist",
+                  "ioValue": 0
+                },
+                {
+                  "name": "zDist",
+                  "ioValue": 0
+                }
+              ]
+            },
+            {
+              "atomType": "Extrude",
+              "x": 0.5491033304867635,
+              "y": 0.639751552795031,
+              "uniqueID": "id-558",
+              "ioValues": [
+                {
+                  "name": "geometry",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                },
+                {
+                  "name": "height",
+                  "ioValue": -3
+                }
+              ]
+            },
+            {
+              "atomType": "Fusion",
+              "x": 0.7164816396242528,
+              "y": 0.32608695652173914,
+              "uniqueID": "id-562",
+              "ioValues": [
+                {
+                  "name": "Shape 2",
+                  "ioValue": null
+                }
+              ],
+              "unionType": "Fusion"
+            },
+            {
               "atomType": "GitHubMolecule",
               "x": 0.3748932536293766,
               "y": 0.3198757763975155,
@@ -751,8 +778,7 @@
                 },
                 {
                   "name": "Bend_radius",
-                  "ioValue": 0.5,
-                  "currentEquation": ".5"
+                  "ioValue": 0.5
                 }
               ],
               "topLevel": false,
@@ -846,129 +872,27 @@
               "fileTypeVersion": 1
             },
             {
-              "atomType": "Input",
-              "x": 0.025384615384615384,
-              "y": 0.15384615384615385,
-              "uniqueID": "id-546",
-              "name": "Hole_diam",
-              "type": "number"
-            },
-            {
-              "atomType": "Circle",
-              "x": 0.2954739538855679,
-              "y": 0.6832298136645962,
-              "uniqueID": "id-549",
-              "ioValues": [
-                {
-                  "name": "diameter",
-                  "ioValue": 0.25
-                }
-              ]
-            },
-            {
-              "atomType": "Move",
-              "x": 0.42186165670367204,
-              "y": 0.6459627329192547,
-              "uniqueID": "id-552",
-              "ioValues": [
-                {
-                  "name": "geometry",
-                  "ioValue": "__GEOMETRY_INPUT__"
-                },
-                {
-                  "name": "xDist",
-                  "ioValue": 0.5,
-                  "currentEquation": ".5"
-                },
-                {
-                  "name": "yDist",
-                  "ioValue": 0,
-                  "currentEquation": "0"
-                },
-                {
-                  "name": "zDist",
-                  "ioValue": 0
-                }
-              ]
-            },
-            {
-              "atomType": "Extrude",
-              "x": 0.5491033304867635,
-              "y": 0.639751552795031,
-              "uniqueID": "id-558",
-              "ioValues": [
-                {
-                  "name": "geometry",
-                  "ioValue": "__GEOMETRY_INPUT__"
-                },
-                {
-                  "name": "height",
-                  "ioValue": -3,
-                  "currentEquation": "-3"
-                }
-              ]
-            },
-            {
-              "atomType": "Fusion",
-              "x": 0.7164816396242528,
-              "y": 0.32608695652173914,
-              "uniqueID": "id-562",
-              "ioValues": [
-                {
-                  "name": "Shape 2",
-                  "ioValue": {
-                    "geometry": "695a06e8-0.125-0.5-0",
-                    "dimension": "3D",
-                    "tags": [
-                      "bend"
-                    ],
-                    "color": "#8a8a8a",
-                    "plane": {
-                      "origin": [
-                        0,
-                        0,
-                        0
-                      ],
-                      "xDir": [
-                        1,
-                        0,
-                        0
-                      ],
-                      "normal": [
-                        0,
-                        0,
-                        1
-                      ]
-                    },
-                    "bom": []
-                  }
-                }
-              ],
-              "unionType": "Fusion"
-            },
-            {
               "atomType": "GitHubMolecule",
-              "x": 0.6857386848847139,
-              "y": 0.6366459627329192,
-              "uniqueID": "id-599",
+              "x": 0.6951323654995729,
+              "y": 0.6118012422360248,
+              "uniqueID": "id-774",
               "name": "threaded-rod",
               "ioValues": [
                 {
                   "name": "diameter",
-                  "ioValue": 0.5
+                  "ioValue": 10
                 },
                 {
                   "name": "Length",
-                  "ioValue": 3
+                  "ioValue": 30
                 },
                 {
                   "name": "pitch",
-                  "ioValue": 0.05,
-                  "currentEquation": "1/20"
+                  "ioValue": 2
                 },
                 {
                   "name": "toothside",
-                  "ioValue": 0.05
+                  "ioValue": 0.6
                 }
               ],
               "topLevel": false,
@@ -977,7 +901,7 @@
                   "atomType": "Output",
                   "x": 0.98,
                   "y": 0.5,
-                  "uniqueID": "id-593",
+                  "uniqueID": "id-768",
                   "ioValues": [
                     {
                       "name": "number or geometry",
@@ -987,25 +911,25 @@
                 },
                 {
                   "atomType": "Code",
-                  "x": 0.5326842837273992,
+                  "x": 0.5380017079419299,
                   "y": 0.4751552795031056,
-                  "uniqueID": "id-594",
+                  "uniqueID": "id-769",
                   "ioValues": [
                     {
                       "name": "diameter",
-                      "ioValue": 0.5
+                      "ioValue": 10
                     },
                     {
                       "name": "length",
-                      "ioValue": 3
+                      "ioValue": 30
                     },
                     {
                       "name": "pitch",
-                      "ioValue": 0.05
+                      "ioValue": 2
                     },
                     {
                       "name": "toothSide",
-                      "ioValue": 0.05
+                      "ioValue": 0.6
                     }
                   ],
                   "codeVersion": 1,
@@ -1015,56 +939,56 @@
                   "atomType": "Input",
                   "x": 0.025384615384615384,
                   "y": 0.15384615384615385,
-                  "uniqueID": "id-595",
+                  "uniqueID": "id-770",
                   "name": "diameter"
                 },
                 {
                   "atomType": "Input",
                   "x": 0.025384615384615384,
                   "y": 0.24615384615384617,
-                  "uniqueID": "id-596",
+                  "uniqueID": "id-771",
                   "name": "Length"
                 },
                 {
                   "atomType": "Input",
                   "x": 0.025384615384615384,
                   "y": 0.3384615384615385,
-                  "uniqueID": "id-597",
+                  "uniqueID": "id-772",
                   "name": "pitch"
                 },
                 {
                   "atomType": "Input",
                   "x": 0.025384615384615384,
                   "y": 0.4307692307692308,
-                  "uniqueID": "id-598",
+                  "uniqueID": "id-773",
                   "name": "toothside"
                 }
               ],
               "allConnectors": [
                 {
                   "ap2Name": "number or geometry",
-                  "ap1ID": "id-594",
-                  "ap2ID": "id-593"
+                  "ap1ID": "id-769",
+                  "ap2ID": "id-768"
                 },
                 {
                   "ap2Name": "diameter",
-                  "ap1ID": "id-595",
-                  "ap2ID": "id-594"
+                  "ap1ID": "id-770",
+                  "ap2ID": "id-769"
                 },
                 {
                   "ap2Name": "length",
-                  "ap1ID": "id-596",
-                  "ap2ID": "id-594"
+                  "ap1ID": "id-771",
+                  "ap2ID": "id-769"
                 },
                 {
                   "ap2Name": "pitch",
-                  "ap1ID": "id-597",
-                  "ap2ID": "id-594"
+                  "ap1ID": "id-772",
+                  "ap2ID": "id-769"
                 },
                 {
                   "ap2Name": "toothSide",
-                  "ap1ID": "id-598",
-                  "ap2ID": "id-594"
+                  "ap1ID": "id-773",
+                  "ap2ID": "id-769"
                 }
               ],
               "parentRepo": {
@@ -1098,11 +1022,6 @@
           ],
           "allConnectors": [
             {
-              "ap2Name": "Shape 2",
-              "ap1ID": "id-534",
-              "ap2ID": "id-562"
-            },
-            {
               "ap2Name": "diameter",
               "ap1ID": "id-546",
               "ap2ID": "id-549"
@@ -1116,6 +1035,11 @@
               "ap2Name": "geometry",
               "ap1ID": "id-552",
               "ap2ID": "id-558"
+            },
+            {
+              "ap2Name": "Shape 2",
+              "ap1ID": "id-534",
+              "ap2ID": "id-562"
             }
           ],
           "fileTypeVersion": 1
