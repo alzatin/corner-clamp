@@ -219,8 +219,8 @@
     },
     {
       "atomType": "Molecule",
-      "x": 0.34793597304128054,
-      "y": 0.28260869565217395,
+      "x": 0.34625105307497894,
+      "y": 0.2919254658385093,
       "uniqueID": "id-233",
       "name": "Corner_piece",
       "ioValues": [
@@ -277,8 +277,8 @@
         },
         {
           "atomType": "Circle",
-          "x": 0.21735467565290648,
-          "y": 0.7298136645962733,
+          "x": 0.2198820556023589,
+          "y": 0.7577639751552795,
           "uniqueID": "id-316",
           "ioValues": [
             {
@@ -914,8 +914,8 @@
         },
         {
           "atomType": "Circle",
-          "x": 0.12126387702818105,
-          "y": 0.3416149068322981,
+          "x": 0.10025273799494525,
+          "y": 0.45962732919254656,
           "uniqueID": "id-1535",
           "ioValues": [
             {
@@ -926,8 +926,8 @@
         },
         {
           "atomType": "Move",
-          "x": 0.18534119629317608,
-          "y": 0.5838509316770186,
+          "x": 0.19208087615838249,
+          "y": 0.7049689440993789,
           "uniqueID": "id-1538",
           "ioValues": [
             {
@@ -1045,8 +1045,8 @@
         },
         {
           "atomType": "Move",
-          "x": 0.5251921434671222,
-          "y": 0.48447204968944096,
+          "x": 0.5341196293176075,
+          "y": 0.48136645962732916,
           "uniqueID": "id-1553",
           "ioValues": [
             {
@@ -1137,8 +1137,8 @@
         },
         {
           "atomType": "Molecule",
-          "x": 0.29035012809564475,
-          "y": 0.32919254658385094,
+          "x": 0.2737994945240101,
+          "y": 0.2577639751552795,
           "uniqueID": "id-382",
           "name": "Corner_thread_piece",
           "ioValues": [
@@ -1171,20 +1171,21 @@
             },
             {
               "atomType": "Circle",
-              "x": 0.25533731853117,
-              "y": 0.4627329192546583,
+              "x": 0.2704296545914069,
+              "y": 0.5372670807453416,
               "uniqueID": "id-549",
               "ioValues": [
                 {
                   "name": "diameter",
-                  "ioValue": 0.375
+                  "ioValue": 0.44999999999999996,
+                  "currentEquation": "Hole_diam *1.2"
                 }
               ]
             },
             {
               "atomType": "Move",
-              "x": 0.4013663535439795,
-              "y": 0.46583850931677023,
+              "x": 0.40269587194608253,
+              "y": 0.43788819875776397,
               "uniqueID": "id-552",
               "ioValues": [
                 {
@@ -1207,8 +1208,8 @@
             },
             {
               "atomType": "Extrude",
-              "x": 0.5004269854824935,
-              "y": 0.5124223602484472,
+              "x": 0.5012636899747261,
+              "y": 0.5,
               "uniqueID": "id-558",
               "ioValues": [
                 {
@@ -1223,8 +1224,8 @@
             },
             {
               "atomType": "Circle",
-              "x": 0.2425277540563621,
-              "y": 0.2546583850931677,
+              "x": 0.2434709351305813,
+              "y": 0.2577639751552795,
               "uniqueID": "id-1379",
               "ioValues": [
                 {
@@ -1299,8 +1300,8 @@
             },
             {
               "atomType": "Circle",
-              "x": 0.1332194705380017,
-              "y": 0.6614906832298136,
+              "x": 0.13984835720303285,
+              "y": 0.6521739130434783,
               "uniqueID": "id-2799",
               "ioValues": [
                 {
@@ -1430,8 +1431,8 @@
             },
             {
               "atomType": "Assembly",
-              "x": 0.7916310845431256,
-              "y": 0.46583850931677023,
+              "x": 0.8037068239258636,
+              "y": 0.4751552795031056,
               "uniqueID": "id-2820",
               "ioValues": [
                 {
@@ -1627,8 +1628,8 @@
             },
             {
               "atomType": "GitHubMolecule",
-              "x": 0.42186165670367204,
-              "y": 0.8416149068322982,
+              "x": 0.417860151642797,
+              "y": 0.8322981366459627,
               "uniqueID": "id-2852",
               "name": "Nut_space",
               "ioValues": [
@@ -1639,11 +1640,13 @@
                 },
                 {
                   "name": "E",
-                  "ioValue": 0.5
+                  "ioValue": 0.625,
+                  "currentEquation": "5/8"
                 },
                 {
                   "name": "thick",
-                  "ioValue": 0.23
+                  "ioValue": 0.3125,
+                  "currentEquation": "5/16"
                 }
               ],
               "topLevel": false,
@@ -1672,7 +1675,7 @@
                     },
                     {
                       "name": "diameter",
-                      "ioValue": 0.5
+                      "ioValue": 0.625
                     }
                   ]
                 },
@@ -1714,7 +1717,7 @@
                     },
                     {
                       "name": "height",
-                      "ioValue": 0.23
+                      "ioValue": 0.3125
                     }
                   ]
                 },
@@ -2116,11 +2119,6 @@
             {
               "ap2Name": "diameter",
               "ap1ID": "id-546",
-              "ap2ID": "id-549"
-            },
-            {
-              "ap2Name": "diameter",
-              "ap1ID": "id-546",
               "ap2ID": "id-1379"
             },
             {
@@ -2213,8 +2211,8 @@
         },
         {
           "atomType": "Molecule",
-          "x": 0.3339026473099914,
-          "y": 0.84472049689441,
+          "x": 0.3251895534962089,
+          "y": 0.8260869565217391,
           "uniqueID": "id-1999",
           "name": "Handle piece",
           "topLevel": false,
@@ -2233,8 +2231,8 @@
             },
             {
               "atomType": "Circle",
-              "x": 0.2621690862510675,
-              "y": 0.48136645962732916,
+              "x": 0.2695871946082561,
+              "y": 0.5031055900621119,
               "uniqueID": "id-2180",
               "ioValues": [
                 {
@@ -2313,8 +2311,8 @@
             },
             {
               "atomType": "Assembly",
-              "x": 0.7566182749786508,
-              "y": 0.7111801242236025,
+              "x": 0.7624262847514743,
+              "y": 0.6863354037267081,
               "uniqueID": "id-2416",
               "ioValues": [
                 {
@@ -2764,23 +2762,25 @@
             },
             {
               "atomType": "GitHubMolecule",
-              "x": 0.5038428693424424,
-              "y": 0.7670807453416149,
+              "x": 0.497893850042123,
+              "y": 0.8012422360248447,
               "uniqueID": "id-2356",
               "name": "Nut_space",
               "ioValues": [
                 {
                   "name": "Diam",
-                  "ioValue": 0.625
+                  "ioValue": 0.44999999999999996,
+                  "currentEquation": "Hole_diam * 1.2"
                 },
                 {
                   "name": "E",
-                  "ioValue": 0.5,
-                  "currentEquation": "1/2"
+                  "ioValue": 0.625,
+                  "currentEquation": "5/8"
                 },
                 {
                   "name": "thick",
-                  "ioValue": 0.23
+                  "ioValue": 0.23,
+                  "currentEquation": "0.23"
                 }
               ],
               "topLevel": false,
@@ -2809,7 +2809,7 @@
                     },
                     {
                       "name": "diameter",
-                      "ioValue": 0.5
+                      "ioValue": 0.625
                     }
                   ]
                 },
@@ -2835,7 +2835,7 @@
                   "ioValues": [
                     {
                       "name": "diameter",
-                      "ioValue": 0.625
+                      "ioValue": 0.44999999999999996
                     }
                   ]
                 },
@@ -3307,6 +3307,36 @@
             }
           ],
           "fileTypeVersion": 1
+        },
+        {
+          "atomType": "Circle",
+          "x": 0.839932603201348,
+          "y": 0.639751552795031,
+          "uniqueID": "id-3797",
+          "ioValues": [
+            {
+              "name": "diameter",
+              "ioValue": 0.375,
+              "currentEquation": "3/8"
+            }
+          ]
+        },
+        {
+          "atomType": "RegularPolygon",
+          "x": 0.8087615838247683,
+          "y": 0.8850931677018634,
+          "uniqueID": "id-3800",
+          "ioValues": [
+            {
+              "name": "number of sides",
+              "ioValue": 6
+            },
+            {
+              "name": "diameter",
+              "ioValue": 0.375,
+              "currentEquation": "3/8"
+            }
+          ]
         }
       ],
       "allConnectors": [
