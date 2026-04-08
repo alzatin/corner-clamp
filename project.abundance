@@ -112,36 +112,6 @@
       ]
     },
     {
-      "atomType": "Code",
-      "x": 0.6916596461668071,
-      "y": 0.8416149068322982,
-      "uniqueID": "id-2454",
-      "ioValues": [
-        {
-          "name": "diameter",
-          "ioValue": 12.7
-        },
-        {
-          "name": "pitch",
-          "ioValue": 2
-        },
-        {
-          "name": "length",
-          "ioValue": 20
-        },
-        {
-          "name": "blockWidth",
-          "ioValue": 30
-        },
-        {
-          "name": "blockHeight",
-          "ioValue": 25
-        }
-      ],
-      "codeVersion": 1,
-      "code": "const Inputs = [\n  { inputName: \"diameter\", type: \"number\", defaultValue: 12.7 },  // 1/2\" = 12.7mm\n  { inputName: \"pitch\", type: \"number\", defaultValue: 2.0 },       // thread pitch in mm\n  { inputName: \"length\", type: \"number\", defaultValue: 20 },\n  { inputName: \"blockWidth\", type: \"number\", defaultValue: 30 },\n  { inputName: \"blockHeight\", type: \"number\", defaultValue: 25 },\n];\n\nconst radius = diameter / 2;\n\n// Build the helix path\nconst helix = replicad.sketchHelix(pitch, length, radius, [0, 0, 0], [0, 0, 1], false);\n\n// Define the thread tooth profile\nconst threadProfile = (plane, origin) => {\n  const profilePlane = new replicad.Plane(origin, [0, 0, -1], plane.zDir);\n  return replicad.draw()\n    .movePointerTo([0, 0])\n    .lineTo([0.6, 0])\n    .lineTo([0.3, 0.5])\n    .close()\n    .sketchOnPlane(profilePlane);\n};\n\n// Sweep the profile along the helix\nconst thread = helix.sweepSketch(threadProfile, { frenet: true });\n\n// Core cylinder — rotate 2 degrees to avoid seam collision with thread\nconst core = replicad.makeCylinder(radius, length).rotate(2);\n\n// Fuse core + thread into one solid cutting tool\nconst cuttingTool = core.fuse(thread, { optimisation: \"sameFace\" });\n\n// Create the block and cut the threaded hole through it\nconst block = replicad.makeBox(blockWidth, blockWidth, blockHeight)\n  .translate(-blockWidth / 2, -blockWidth / 2, 0);\n\nconst result = block.cut(cuttingTool);\n\nreturn {\n  geometry: [cuttingTool],\n  dimension: \"3D\",\n  tags: [\"female-threads\"],\n  color: \"#7ec8e3\",\n  plane: new replicad.Plane(),\n  bom: []\n};"
-    },
-    {
       "atomType": "Export",
       "x": 0.5328778821520068,
       "y": 0.7422360248447205,
@@ -170,22 +140,6 @@
       "resolution": 96,
       "importIndex": 0,
       "partName": "handle_clamp_1/2"
-    },
-    {
-      "atomType": "RegularPolygon",
-      "x": 0.6251053074978938,
-      "y": 0.8354037267080745,
-      "uniqueID": "id-2929",
-      "ioValues": [
-        {
-          "name": "number of sides",
-          "ioValue": 5
-        },
-        {
-          "name": "diameter",
-          "ioValue": 0.5
-        }
-      ]
     },
     {
       "atomType": "Export",
