@@ -87,8 +87,8 @@
     },
     {
       "atomType": "Move",
-      "x": 0.4935952177625961,
-      "y": 0.4347826086956522,
+      "x": 0.49536647009267054,
+      "y": 0.40993788819875776,
       "uniqueID": "id-2448",
       "ioValues": [
         {
@@ -142,9 +142,85 @@
       "code": "const Inputs = [\n  { inputName: \"diameter\", type: \"number\", defaultValue: 12.7 },  // 1/2\" = 12.7mm\n  { inputName: \"pitch\", type: \"number\", defaultValue: 2.0 },       // thread pitch in mm\n  { inputName: \"length\", type: \"number\", defaultValue: 20 },\n  { inputName: \"blockWidth\", type: \"number\", defaultValue: 30 },\n  { inputName: \"blockHeight\", type: \"number\", defaultValue: 25 },\n];\n\nconst radius = diameter / 2;\n\n// Build the helix path\nconst helix = replicad.sketchHelix(pitch, length, radius, [0, 0, 0], [0, 0, 1], false);\n\n// Define the thread tooth profile\nconst threadProfile = (plane, origin) => {\n  const profilePlane = new replicad.Plane(origin, [0, 0, -1], plane.zDir);\n  return replicad.draw()\n    .movePointerTo([0, 0])\n    .lineTo([0.6, 0])\n    .lineTo([0.3, 0.5])\n    .close()\n    .sketchOnPlane(profilePlane);\n};\n\n// Sweep the profile along the helix\nconst thread = helix.sweepSketch(threadProfile, { frenet: true });\n\n// Core cylinder — rotate 2 degrees to avoid seam collision with thread\nconst core = replicad.makeCylinder(radius, length).rotate(2);\n\n// Fuse core + thread into one solid cutting tool\nconst cuttingTool = core.fuse(thread, { optimisation: \"sameFace\" });\n\n// Create the block and cut the threaded hole through it\nconst block = replicad.makeBox(blockWidth, blockWidth, blockHeight)\n  .translate(-blockWidth / 2, -blockWidth / 2, 0);\n\nconst result = block.cut(cuttingTool);\n\nreturn {\n  geometry: [cuttingTool],\n  dimension: \"3D\",\n  tags: [\"female-threads\"],\n  color: \"#7ec8e3\",\n  plane: new replicad.Plane(),\n  bom: []\n};"
     },
     {
+      "atomType": "Export",
+      "x": 0.5328778821520068,
+      "y": 0.7422360248447205,
+      "uniqueID": "id-2794",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "File Type",
+          "ioValue": "STL",
+          "currentEquation": "STL"
+        },
+        {
+          "name": "Resolution (dpi)",
+          "ioValue": 96
+        },
+        {
+          "name": "Part Name",
+          "ioValue": "handle_clamp_1/2",
+          "currentEquation": "handle_clamp_1/2"
+        }
+      ],
+      "type": null,
+      "resolution": 96,
+      "importIndex": 0,
+      "partName": "handle_clamp_1/2"
+    },
+    {
+      "atomType": "RegularPolygon",
+      "x": 0.7295703454085931,
+      "y": 0.5,
+      "uniqueID": "id-2929",
+      "ioValues": [
+        {
+          "name": "number of sides",
+          "ioValue": 5
+        },
+        {
+          "name": "diameter",
+          "ioValue": 0.5
+        }
+      ]
+    },
+    {
+      "atomType": "Export",
+      "x": 0.49368155012636905,
+      "y": 0.21428571428571427,
+      "uniqueID": "id-3361",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "File Type",
+          "ioValue": "STL",
+          "currentEquation": "STL"
+        },
+        {
+          "name": "Resolution (dpi)",
+          "ioValue": 96
+        },
+        {
+          "name": "Part Name",
+          "ioValue": "Corner-piece",
+          "currentEquation": "Corner-piece"
+        }
+      ],
+      "type": null,
+      "resolution": 96,
+      "importIndex": 0,
+      "partName": "Corner-piece"
+    },
+    {
       "atomType": "Molecule",
-      "x": 0.39026473099914605,
-      "y": 0.24534161490683226,
+      "x": 0.34793597304128054,
+      "y": 0.28260869565217395,
       "uniqueID": "id-233",
       "name": "Corner_piece",
       "ioValues": [
@@ -201,21 +277,21 @@
         },
         {
           "atomType": "Circle",
-          "x": 0.2148817802503477,
-          "y": 0.7236024844720497,
+          "x": 0.21735467565290648,
+          "y": 0.7298136645962733,
           "uniqueID": "id-316",
           "ioValues": [
             {
               "name": "diameter",
-              "ioValue": 0.375,
-              "currentEquation": "Hole_diam"
+              "ioValue": 0.44999999999999996,
+              "currentEquation": "Hole_diam *1.2"
             }
           ]
         },
         {
           "atomType": "Extrude",
-          "x": 0.34492350486787204,
-          "y": 0.7391304347826086,
+          "x": 0.34962089300758215,
+          "y": 0.7515527950310559,
           "uniqueID": "id-319",
           "ioValues": [
             {
@@ -336,8 +412,8 @@
         },
         {
           "atomType": "Molecule",
-          "x": 0.24061196105702365,
-          "y": 0.406832298136646,
+          "x": 0.2417860151642797,
+          "y": 0.391304347826087,
           "uniqueID": "id-282",
           "name": "Chunk",
           "topLevel": false,
@@ -538,8 +614,8 @@
         },
         {
           "atomType": "GitHubMolecule",
-          "x": 0.4513212795549374,
-          "y": 0.7204968944099379,
+          "x": 0.4397641112047178,
+          "y": 0.7236024844720497,
           "uniqueID": "id-332",
           "name": "Linear_Pattern__Distance_",
           "ioValues": [
@@ -550,7 +626,8 @@
             },
             {
               "name": "Spacing",
-              "ioValue": 0.65
+              "ioValue": 0.5625,
+              "currentEquation": "Hole_diam*1.5"
             }
           ],
           "topLevel": false,
@@ -583,7 +660,7 @@
                 },
                 {
                   "name": "spacing",
-                  "ioValue": 0.65
+                  "ioValue": 0.5625
                 }
               ],
               "codeVersion": 1,
@@ -767,8 +844,8 @@
     },
     {
       "atomType": "Molecule",
-      "x": 0.27156276686592656,
-      "y": 0.5962732919254659,
+      "x": 0.27211457455770854,
+      "y": 0.6211180124223602,
       "uniqueID": "id-243",
       "name": "Clamp_piece",
       "ioValues": [
@@ -849,8 +926,8 @@
         },
         {
           "atomType": "Move",
-          "x": 0.18445772843723313,
-          "y": 0.5652173913043479,
+          "x": 0.18534119629317608,
+          "y": 0.5838509316770186,
           "uniqueID": "id-1538",
           "ioValues": [
             {
@@ -1221,113 +1298,6 @@
               ]
             },
             {
-              "atomType": "GitHubMolecule",
-              "x": 0.6063193851409052,
-              "y": 0.18012422360248448,
-              "uniqueID": "id-534",
-              "name": "Solid-rod-bent-corner",
-              "ioValues": [
-                {
-                  "name": "Tube_radius",
-                  "ioValue": 0.1875,
-                  "currentEquation": "Hole_diam/2"
-                },
-                {
-                  "name": "Bend_radius",
-                  "ioValue": 0.5
-                }
-              ],
-              "topLevel": false,
-              "allAtoms": [
-                {
-                  "atomType": "Output",
-                  "x": 0.98,
-                  "y": 0.5,
-                  "uniqueID": "id-530",
-                  "ioValues": [
-                    {
-                      "name": "number or geometry",
-                      "ioValue": "__GEOMETRY_INPUT__"
-                    }
-                  ]
-                },
-                {
-                  "atomType": "Code",
-                  "x": 0.42869342442356956,
-                  "y": 0.5652173913043479,
-                  "uniqueID": "id-531",
-                  "ioValues": [
-                    {
-                      "name": "tubeRadius",
-                      "ioValue": 0.1875
-                    },
-                    {
-                      "name": "bendRadius",
-                      "ioValue": 0.5
-                    }
-                  ],
-                  "codeVersion": 1,
-                  "code": "const Inputs = [\n  { inputName: \"tubeRadius\", type: \"number\", defaultValue: 5 },\n  { inputName: \"bendRadius\", type: \"number\", defaultValue: 30 },\n  \n];\n\nconst mid = bendRadius / Math.sqrt(2);\n\n// Quarter-circle arc path in the XZ plane\nconst path = replicad.draw()\n  .movePointerTo([bendRadius, 0])\n  .threePointsArcTo([0, bendRadius], [mid, mid])\n  .done()\n  .sketchOnPlane(\"XZ\");\n\n// Circular cross-section swept along the path\nconst drawProfile = (plane, origin) => {\n  const profilePlane = new replicad.Plane(origin, [0, 0, -1], plane.zDir);\n  return replicad.drawCircle(tubeRadius).sketchOnPlane(profilePlane);\n};\n\nconst bend = path.sweepSketch(drawProfile, { frenet: true });\n\nreturn {\n  geometry: [bend],\n  dimension: \"3D\",\n  tags: [\"bend\"],\n  color: \"#8a8a8a\",\n  plane: null,\n  bom: []\n};\n"
-                },
-                {
-                  "atomType": "Input",
-                  "x": 0.025384615384615384,
-                  "y": 0.15384615384615385,
-                  "uniqueID": "id-532",
-                  "name": "Tube_radius"
-                },
-                {
-                  "atomType": "Input",
-                  "x": 0.025384615384615384,
-                  "y": 0.24615384615384617,
-                  "uniqueID": "id-533",
-                  "name": "Bend_radius"
-                }
-              ],
-              "allConnectors": [
-                {
-                  "ap2Name": "number or geometry",
-                  "ap1ID": "id-531",
-                  "ap2ID": "id-530"
-                },
-                {
-                  "ap2Name": "tubeRadius",
-                  "ap1ID": "id-532",
-                  "ap2ID": "id-531"
-                },
-                {
-                  "ap2Name": "bendRadius",
-                  "ap1ID": "id-533",
-                  "ap2ID": "id-531"
-                }
-              ],
-              "parentRepo": {
-                "privateRepo": false,
-                "repoName": "Solid-rod-bent-corner",
-                "dateCreated": "2026-04-07T16:51:11Z",
-                "readMe": "https://raw.githubusercontent.com/alzatin/Solid-rod-bent-corner/master/README.md?sanitize=true",
-                "yyyy": 2026,
-                "topMoleculeID": "id-429",
-                "githubMoleculesUsed": [],
-                "html_url": "https://github.com/alzatin/Solid-rod-bent-corner",
-                "topics": [
-                  "hardware"
-                ],
-                "parentRepo": null,
-                "forks": 0,
-                "dateModified": "739713",
-                "ranking": 0,
-                "searchField": "solid-rod-bent-corner alzatin  hardware",
-                "owner": "alzatin",
-                "description": "",
-                "contentURL": "https://raw.githubusercontent.com/alzatin/Solid-rod-bent-corner/master/project.abundance?sanitize=true",
-                "svgURL": "https://raw.githubusercontent.com/alzatin/Solid-rod-bent-corner/master/project.svg?sanitize=true",
-                "isLocal": false
-              },
-              "unitsKey": "Unitless",
-              "fileTypeVersion": 1
-            },
-            {
               "atomType": "Circle",
               "x": 0.1332194705380017,
               "y": 0.6614906832298136,
@@ -1335,8 +1305,7 @@
               "ioValues": [
                 {
                   "name": "diameter",
-                  "ioValue": 1,
-                  "currentEquation": "1"
+                  "ioValue": 1
                 }
               ]
             },
@@ -1480,6 +1449,183 @@
               ]
             },
             {
+              "atomType": "Difference",
+              "x": 0.6848847139197267,
+              "y": 0.8012422360248447,
+              "uniqueID": "id-2912",
+              "ioValues": [
+                {
+                  "name": "geometry1",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                },
+                {
+                  "name": "geometry2",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                }
+              ]
+            },
+            {
+              "atomType": "Move",
+              "x": 0.5286080273270709,
+              "y": 0.953416149068323,
+              "uniqueID": "id-2917",
+              "ioValues": [
+                {
+                  "name": "geometry",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                },
+                {
+                  "name": "xDist",
+                  "ioValue": 0.5
+                },
+                {
+                  "name": "yDist",
+                  "ioValue": 0
+                },
+                {
+                  "name": "zDist",
+                  "ioValue": 0
+                }
+              ]
+            },
+            {
+              "atomType": "Export",
+              "x": 0.8104184457728437,
+              "y": 0.8322981366459627,
+              "uniqueID": "id-2923",
+              "ioValues": [
+                {
+                  "name": "geometry",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                },
+                {
+                  "name": "File Type",
+                  "ioValue": "STL",
+                  "currentEquation": "STL"
+                },
+                {
+                  "name": "Resolution (dpi)",
+                  "ioValue": 96
+                },
+                {
+                  "name": "Part Name",
+                  "ioValue": "Corner_thread_piece",
+                  "currentEquation": "Corner_thread_piece"
+                }
+              ],
+              "type": null,
+              "resolution": 96,
+              "importIndex": 0,
+              "partName": "Corner_thread_piece"
+            },
+            {
+              "atomType": "GitHubMolecule",
+              "x": 0.6063193851409052,
+              "y": 0.18012422360248448,
+              "uniqueID": "id-534",
+              "name": "Solid-rod-bent-corner",
+              "ioValues": [
+                {
+                  "name": "Tube_radius",
+                  "ioValue": 0.1875,
+                  "currentEquation": "Hole_diam/2"
+                },
+                {
+                  "name": "Bend_radius",
+                  "ioValue": 0.5
+                }
+              ],
+              "topLevel": false,
+              "allAtoms": [
+                {
+                  "atomType": "Output",
+                  "x": 0.98,
+                  "y": 0.5,
+                  "uniqueID": "id-530",
+                  "ioValues": [
+                    {
+                      "name": "number or geometry",
+                      "ioValue": "__GEOMETRY_INPUT__"
+                    }
+                  ]
+                },
+                {
+                  "atomType": "Code",
+                  "x": 0.42869342442356956,
+                  "y": 0.5652173913043479,
+                  "uniqueID": "id-531",
+                  "ioValues": [
+                    {
+                      "name": "tubeRadius",
+                      "ioValue": 0.1875
+                    },
+                    {
+                      "name": "bendRadius",
+                      "ioValue": 0.5
+                    }
+                  ],
+                  "codeVersion": 1,
+                  "code": "const Inputs = [\n  { inputName: \"tubeRadius\", type: \"number\", defaultValue: 5 },\n  { inputName: \"bendRadius\", type: \"number\", defaultValue: 30 },\n  \n];\n\nconst mid = bendRadius / Math.sqrt(2);\n\n// Quarter-circle arc path in the XZ plane\nconst path = replicad.draw()\n  .movePointerTo([bendRadius, 0])\n  .threePointsArcTo([0, bendRadius], [mid, mid])\n  .done()\n  .sketchOnPlane(\"XZ\");\n\n// Circular cross-section swept along the path\nconst drawProfile = (plane, origin) => {\n  const profilePlane = new replicad.Plane(origin, [0, 0, -1], plane.zDir);\n  return replicad.drawCircle(tubeRadius).sketchOnPlane(profilePlane);\n};\n\nconst bend = path.sweepSketch(drawProfile, { frenet: true });\n\nreturn {\n  geometry: [bend],\n  dimension: \"3D\",\n  tags: [\"bend\"],\n  color: \"#8a8a8a\",\n  plane: null,\n  bom: []\n};\n"
+                },
+                {
+                  "atomType": "Input",
+                  "x": 0.025384615384615384,
+                  "y": 0.15384615384615385,
+                  "uniqueID": "id-532",
+                  "name": "Tube_radius"
+                },
+                {
+                  "atomType": "Input",
+                  "x": 0.025384615384615384,
+                  "y": 0.24615384615384617,
+                  "uniqueID": "id-533",
+                  "name": "Bend_radius"
+                }
+              ],
+              "allConnectors": [
+                {
+                  "ap2Name": "number or geometry",
+                  "ap1ID": "id-531",
+                  "ap2ID": "id-530"
+                },
+                {
+                  "ap2Name": "tubeRadius",
+                  "ap1ID": "id-532",
+                  "ap2ID": "id-531"
+                },
+                {
+                  "ap2Name": "bendRadius",
+                  "ap1ID": "id-533",
+                  "ap2ID": "id-531"
+                }
+              ],
+              "parentRepo": {
+                "privateRepo": false,
+                "repoName": "Solid-rod-bent-corner",
+                "dateCreated": "2026-04-07T16:51:11Z",
+                "readMe": "https://raw.githubusercontent.com/alzatin/Solid-rod-bent-corner/master/README.md?sanitize=true",
+                "yyyy": 2026,
+                "topMoleculeID": "id-429",
+                "githubMoleculesUsed": [],
+                "html_url": "https://github.com/alzatin/Solid-rod-bent-corner",
+                "topics": [
+                  "hardware"
+                ],
+                "parentRepo": null,
+                "forks": 0,
+                "dateModified": "739713",
+                "ranking": 0,
+                "searchField": "solid-rod-bent-corner alzatin  hardware",
+                "owner": "alzatin",
+                "description": "",
+                "contentURL": "https://raw.githubusercontent.com/alzatin/Solid-rod-bent-corner/master/project.abundance?sanitize=true",
+                "svgURL": "https://raw.githubusercontent.com/alzatin/Solid-rod-bent-corner/master/project.svg?sanitize=true",
+                "isLocal": false
+              },
+              "unitsKey": "Unitless",
+              "fileTypeVersion": 1
+            },
+            {
               "atomType": "GitHubMolecule",
               "x": 0.42186165670367204,
               "y": 0.8416149068322982,
@@ -1493,8 +1639,7 @@
                 },
                 {
                   "name": "E",
-                  "ioValue": 0.5,
-                  "currentEquation": "0.5"
+                  "ioValue": 0.5
                 },
                 {
                   "name": "thick",
@@ -1965,76 +2110,6 @@
               },
               "unitsKey": "Unitless",
               "fileTypeVersion": 1
-            },
-            {
-              "atomType": "Difference",
-              "x": 0.6848847139197267,
-              "y": 0.8012422360248447,
-              "uniqueID": "id-2912",
-              "ioValues": [
-                {
-                  "name": "geometry1",
-                  "ioValue": "__GEOMETRY_INPUT__"
-                },
-                {
-                  "name": "geometry2",
-                  "ioValue": "__GEOMETRY_INPUT__"
-                }
-              ]
-            },
-            {
-              "atomType": "Move",
-              "x": 0.5286080273270709,
-              "y": 0.953416149068323,
-              "uniqueID": "id-2917",
-              "ioValues": [
-                {
-                  "name": "geometry",
-                  "ioValue": "__GEOMETRY_INPUT__"
-                },
-                {
-                  "name": "xDist",
-                  "ioValue": 0.5
-                },
-                {
-                  "name": "yDist",
-                  "ioValue": 0
-                },
-                {
-                  "name": "zDist",
-                  "ioValue": 0
-                }
-              ]
-            },
-            {
-              "atomType": "Export",
-              "x": 0.8104184457728437,
-              "y": 0.8322981366459627,
-              "uniqueID": "id-2923",
-              "ioValues": [
-                {
-                  "name": "geometry",
-                  "ioValue": "__GEOMETRY_INPUT__"
-                },
-                {
-                  "name": "File Type",
-                  "ioValue": "STL",
-                  "currentEquation": "STL"
-                },
-                {
-                  "name": "Resolution (dpi)",
-                  "ioValue": 96
-                },
-                {
-                  "name": "Part Name",
-                  "ioValue": "Corner_thread_piece",
-                  "currentEquation": "Corner_thread_piece"
-                }
-              ],
-              "type": null,
-              "resolution": 96,
-              "importIndex": 0,
-              "partName": "Corner_thread_piece"
             }
           ],
           "allConnectors": [
@@ -2114,11 +2189,6 @@
               "ap2ID": "id-384"
             },
             {
-              "ap2Name": "geometry",
-              "ap1ID": "id-2852",
-              "ap2ID": "id-2917"
-            },
-            {
               "ap2Name": "Shape 3",
               "ap1ID": "id-2912",
               "ap2ID": "id-2820"
@@ -2132,6 +2202,11 @@
               "ap2Name": "geometry2",
               "ap1ID": "id-2917",
               "ap2ID": "id-2912"
+            },
+            {
+              "ap2Name": "geometry",
+              "ap1ID": "id-2852",
+              "ap2ID": "id-2917"
             }
           ],
           "fileTypeVersion": 1
@@ -2232,8 +2307,7 @@
                 },
                 {
                   "name": "height",
-                  "ioValue": 0.5,
-                  "currentEquation": "0.5"
+                  "ioValue": 0.5
                 }
               ]
             },
@@ -2697,8 +2771,7 @@
               "ioValues": [
                 {
                   "name": "Diam",
-                  "ioValue": 0.625,
-                  "currentEquation": "0.625"
+                  "ioValue": 0.625
                 },
                 {
                   "name": "E",
@@ -3304,53 +3377,6 @@
         }
       ],
       "fileTypeVersion": 1
-    },
-    {
-      "atomType": "Export",
-      "x": 0.5328778821520068,
-      "y": 0.7422360248447205,
-      "uniqueID": "id-2794",
-      "ioValues": [
-        {
-          "name": "geometry",
-          "ioValue": "__GEOMETRY_INPUT__"
-        },
-        {
-          "name": "File Type",
-          "ioValue": "STL",
-          "currentEquation": "STL"
-        },
-        {
-          "name": "Resolution (dpi)",
-          "ioValue": 96
-        },
-        {
-          "name": "Part Name",
-          "ioValue": "handle_clamp_1/2",
-          "currentEquation": "handle_clamp_1/2"
-        }
-      ],
-      "type": null,
-      "resolution": 96,
-      "importIndex": 0,
-      "partName": "handle_clamp_1/2"
-    },
-    {
-      "atomType": "RegularPolygon",
-      "x": 0.7327070879590094,
-      "y": 0.48757763975155277,
-      "uniqueID": "id-2929",
-      "ioValues": [
-        {
-          "name": "number of sides",
-          "ioValue": 6
-        },
-        {
-          "name": "diameter",
-          "ioValue": 0.5,
-          "currentEquation": ".5"
-        }
-      ]
     }
   ],
   "allConnectors": [
@@ -3393,6 +3419,11 @@
       "ap2Name": "Shape 1",
       "ap1ID": "id-233",
       "ap2ID": "id-2443"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-233",
+      "ap2ID": "id-3361"
     },
     {
       "ap2Name": "geometry",
